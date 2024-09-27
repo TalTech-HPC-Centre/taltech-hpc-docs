@@ -147,5 +147,4 @@ srun singularity exec --rocm \
 
 The environment variables containing `NCCL` and `CXI` are used by RCCL for communication over Slingshot.
 
-The ones containing `MIOPEN` are for [MIOpen](https://rocmsoftwareplatform.github.io/MIOpen/doc/html/index.html) to create its caches in the `/tmp` (which is local to each node and in memory). If this is not set, then MIOpen will create its cache in the user home directory (the default), which is a problem since each node needs its own cache.
-
+The ones containing `MIOPEN` are for [MIOpen](https://rocm.docs.amd.com/projects/MIOpen/en/latest/) to create its caches in the `/tmp` (which is local to each node and in memory). If this is not set, then MIOpen will create its cache in the user home directory (the default), which is a problem since each node needs its own cache.

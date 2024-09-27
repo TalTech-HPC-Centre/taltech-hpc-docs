@@ -14,6 +14,20 @@
             "replacement": "{{BASEURL}}/docs/"
         }
     ],
+    "ignorePatterns": [
+    {
+        "pattern": "^https://www.sciencedirect.com"
+    },
+    {
+        "pattern": "^https://base.hpc.taltech.ee"
+    },
+    {
+        "pattern": "^https://ondemand.hpc.taltech.ee"
+    },
+    {
+        "pattern": "^https://sylabs.io/"
+    }
+  ],
     "timeout": "20s",
     "retryOn429": false,
     "retryCount": 5,
