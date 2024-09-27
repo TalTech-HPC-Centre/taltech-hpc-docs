@@ -1,14 +1,18 @@
 {
-    "projectBaseUrl": "https://taltech-hpc-centre.github.io/taltech-hpc-docs",
+    "projectBaseUrl":"${workspaceFolder}",
     "replacementPatterns": [
         {
-          "pattern": "^/",
-          "replacement": "{{BASEURL}}/"
+            "pattern": "^/",
+            "replacement": "{{BASEURL}}/"
+        },
+        {
+            "pattern": "/github/workspace/",
+            "replacement": "/github/workspace/docs/"
         }
-      ],
-      "timeout": "20s",
-      "retryOn429": true,
-      "retryCount": 5,
-      "fallbackRetryDelay": "30s",
-      "aliveStatusCodes": [200, 206, 429, 301, 302, 303, 307, 308]
+    ],
+    "timeout": "20s",
+    "retryOn429": true,
+    "retryCount": 5,
+    "fallbackRetryDelay": "30s",
+    "aliveStatusCodes": [200, 206, 429, 301, 302, 303, 307, 308]
 }
