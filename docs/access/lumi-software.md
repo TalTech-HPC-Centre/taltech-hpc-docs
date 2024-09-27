@@ -225,4 +225,4 @@ eb -r GROMACS-2020.4-foss-2020a.eb
 
 Make sure to replace `program_name@version` and `program_eb_file` with the actual program name and version or EasyBuild file name.
 
-For more details, refer to the [LUMI documentation](https://docs.lumi-supercomputer.eu/software/uninstalling/).
+For more details, refer to the [LUMI documentation](https://docs.lumi-supercomputer.eu/software/).

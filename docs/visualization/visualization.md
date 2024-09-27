@@ -92,7 +92,7 @@ In-situ visualization creates the visualization during the simulation instead of
 
 The following are installed on our cluster:
 
-- [Catalyst](https://www.paraview.org/hpc-insitu/)
+- [Catalyst](https://www.paraview.org/insitu/)
 - [Ascent](https://github.com/Alpine-DAV/ascent)
 - LibSim
 - SENSEI

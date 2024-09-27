@@ -98,7 +98,7 @@ mkdir Jupyter  # Create folder for your Jupyter
 exit  
 ```
 
-Copy the sbatch script [jupyterlab.slurm](/software/attachments/jupyterlab.slurm) (for the SLURM queuing system) to your newly created Jupyter folder in HPC.
+Copy the sbatch script [jupyterlab.slurm](/software/attachments/jupyterlab.slurm.txt) (for the SLURM queuing system) to your newly created Jupyter folder in HPC.
 
 ***NB!*** The file jupyterlab.slurm must be in the same folder where you execute the copy command.
 
