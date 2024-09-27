@@ -16,6 +16,8 @@ Build: `mkdocs build`
 
 ### CI/CD / Workflow info
 
+After build and before deployment, media files are optimized with [jampack](https://github.com/divriots/jampack). It takes about 30 seconds longer than usual to deploy a new build as a result.
+
 Dead links are checked on schedule and on each push. Check Actions to see results and fix dead links!
 
 ### Pro tips
