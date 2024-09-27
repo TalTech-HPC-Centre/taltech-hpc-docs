@@ -3,13 +3,13 @@
 !!! warning
     This page has not been completely updated for Rocky 8 yet!
 
-Visualization mostly should be done on **viz** ([Molden](#molden), [Avogadro](#avogadro), [JMol](#jmol) or [VMD](#vmd)), but also short-time geometry checks are possible on **base** ([Molden](#molden), [Avogadro](#avogadro) or [JMol](#jmol)).
+Visualization should mostly be done on **viz** ([Molden](#molden), [Avogadro](#avogadro), [JMol](#jmol), or [VMD](#vmd)), but short-time geometry checks are also possible on **base** ([Molden](#molden), [Avogadro](#avogadro), or [JMol](#jmol)).
 
 ---
 
 ## Short introduction
 
-1. Access **viz** by [remote access programs](/visualization/visualization) (more preferable) or by ssh protocol (less preferable):
+1. Access **viz** by [remote access programs](/visualization/visualization) (more preferable) or by SSH protocol (less preferable):
 
     ```sh
     ssh -X -Y -J UNI-ID@base.hpc.taltech.ee UNI-ID@viz
@@ -22,7 +22,7 @@ Visualization mostly should be done on **viz** ([Molden](#molden), [Avogadro](#a
     module load jmol
     ```
 
-3. Run visualization program (`jmol`, `molden`, `avogadro`, `vmd` or `rasmol`):
+3. Run visualization program (`jmol`, `molden`, `avogadro`, `vmd`, or `rasmol`):
 
     ```sh
     jmol job.xyz
@@ -34,7 +34,7 @@ Visualization mostly should be done on **viz** ([Molden](#molden), [Avogadro](#a
 
 ### Molden
 
-[Molden](https://www.theochem.ru.nl/molden/) is a nice program for visualization the results of quantum chemical calculations.
+[Molden](https://www.theochem.ru.nl/molden/) is a nice program for visualizing the results of quantum chemical calculations.
 
 Molden is quite universal:
 
@@ -46,14 +46,14 @@ Molden is quite universal:
 
 #### Environment
 
-On **viz** environment is set up by the commands:
+On **viz** the environment is set up by the commands:
 
 ```sh
 module load viz-spack
 module load molden
 ```
 
-On **base** environment is set up by the commands:
+On **base** the environment is set up by the commands:
 
 ```sh
 module load green/all
@@ -62,7 +62,7 @@ module load molden
 
 #### Running Molden
 
-Molden is executed by command `molden` and reads `.xyz`, Gaussian and ORCA outputs, etc.
+Molden is executed by the command `molden` and reads `.xyz`, Gaussian and ORCA outputs, etc.
 
 ```sh
 molden job.out
@@ -97,7 +97,7 @@ Avogadro has many useful options:
 - measurements,
 - performing a conformational search,
 - reading various input and output formats,
-- showing of molecular orbitals and electron density,
+- showing molecular orbitals and electron density,
 - animation of reaction paths and molecular vibrations,
 - construction of IR spectra.
 
@@ -105,7 +105,7 @@ Avogadro has many useful options:
 
 On **viz** there is a native install of Avogadro (no modules needed).
 
-On **base** environment is set up by the commands:
+On **base** the environment is set up by the commands:
 
 ```sh
 module load green/all
@@ -114,7 +114,7 @@ module load Avogadro
 
 #### Running Avogadro
 
-Avogadro is executed by command `avogadro` and reads various input and output formats.
+Avogadro is executed by the command `avogadro` and reads various input and output formats.
 
 ```sh
 avogadro job.log
@@ -138,7 +138,7 @@ Some useful links:
 
 ### JMol
 
-[JMol](http://jmol.sourceforge.net/) is a free, open source viewer of molecular structures that supports a wide range of chemical file formats.
+[JMol](http://jmol.sourceforge.net/) is a free, open-source viewer of molecular structures that supports a wide range of chemical file formats.
 
 JMol has the following possibilities:
 
@@ -151,7 +151,7 @@ JMol has the following possibilities:
 
 #### Environment
 
-On **viz** environment is set up by the commands:
+On **viz** the environment is set up by the commands:
 
 ```sh
 module load green-spack
@@ -167,7 +167,7 @@ module load jmol
 
 #### Running JMol
 
-JMol is executed by command `jmol` and reads `.xyz`, `.pdb`, `.mol` formats, etc.
+JMol is executed by the command `jmol` and reads `.xyz`, `.pdb`, `.mol` formats, etc.
 
 ```sh
 jmol job.pdb
@@ -183,7 +183,7 @@ Jmol 14.31.0: an open-source Java viewer for chemical structures in 3D. Availabl
 
 ### VMD
 
-[Visual Molecular Dynamics (VMD)](http://www.ks.uiuc.edu/Research/vmd/) is a molecular modeling and visualization program designed for biological systems. It supports over 60 file formats and has user-extensible graphical and text-based interfaces, as well as built-on standard Tcl/Tk and Python scripting languages. VMD provides a wide range of methods for visualizing and coloring molecules or atom subsets and an extensive selection syntax for subsets of atoms and has no limits on the number of molecules, atoms, residues or trajectory frames.
+[Visual Molecular Dynamics (VMD)](http://www.ks.uiuc.edu/Research/vmd/) is a molecular modeling and visualization program designed for biological systems. It supports over 60 file formats and has user-extensible graphical and text-based interfaces, as well as built-in standard Tcl/Tk and Python scripting languages. VMD provides a wide range of methods for visualizing and coloring molecules or atom subsets and an extensive selection syntax for subsets of atoms and has no limits on the number of molecules, atoms, residues, or trajectory frames.
 
 VMD has the following features:
 
@@ -202,13 +202,13 @@ Some useful links:
 
 #### Environment
 
-The first time use, the user has to read the license at [https://www.ks.uiuc.edu/Research/vmd/current/LICENSE.html](https://www.ks.uiuc.edu/Research/vmd/current/LICENSE.html) the software can only be used if the license is accepted! If you agree to the license, do:
+The first time use, the user has to read the license [here](https://www.ks.uiuc.edu/Research/vmd/current/LICENSE.html). The software can only be used if the license is accepted! If you agree to the license, do:
 
 ```sh
 touch ~/.licenses/vmd-accepted
 ```
 
-After that it is needed to unload module and load it again by commands:
+After that, it is needed to unload the module and load it again by commands:
 
 ```sh
 module unload VMD/1.9.3-text
@@ -224,25 +224,25 @@ module unload VMD/1.9.3-text
 module load VMD
 ```
 
-On **viz** environment is set up by the commands:
+On **viz** the environment is set up by the commands:
 
 ```sh
 module load viz
 module load VMD
 ```
 
-On **base** environment is set up by the commands:
+On **base** the environment is set up by the commands:
 
 ```sh
 module load green
 module load VMD
 ```
 
-User also needs to agree with the licenses, as described above.
+The user also needs to agree with the licenses, as described above.
 
 #### Running VMD
 
-VMD is executed by command `vmd` and reads various input and output formats.
+VMD is executed by the command `vmd` and reads various input and output formats.
 
 ```sh
 vmd job.mol
@@ -269,9 +269,9 @@ vmd job.mol
 
 ### RasMol
 
-[RasMol](http://www.openrasmol.org/) is a molecular graphics program for visualization of proteins, nucleic acids and small molecules. RasMol provides a variety of color schemes and molecule representations. In RasMol, different parts of the molecule may be represented and colored independently of the rest of the molecule or displayed in several representations simultaneously, and atoms may also be labeled with arbitrary text strings. In addition, RasMol can read a prepared list of commands from a 'script' file. Supported input file formats are `.pdb`, `.mol2`, `.mdl`, `.msc`, `.xyz`, `.xmol`, CHARMm and CIF formats files. Finally, the rendered image may be written in a variety of formats such as GIF, PPM, BMP, PICT, Sun rasterfile or as a MolScript input script or Kinemage.
+[RasMol](http://www.openrasmol.org/) is a molecular graphics program for visualization of proteins, nucleic acids, and small molecules. RasMol provides a variety of color schemes and molecule representations. In RasMol, different parts of the molecule may be represented and colored independently of the rest of the molecule or displayed in several representations simultaneously, and atoms may also be labeled with arbitrary text strings. In addition, RasMol can read a prepared list of commands from a 'script' file. Supported input file formats are `.pdb`, `.mol2`, `.mdl`, `.msc`, `.xyz`, `.xmol`, CHARMm and CIF formats files. Finally, the rendered image may be written in a variety of formats such as GIF, PPM, BMP, PICT, Sun rasterfile or as a MolScript input script or Kinemage.
 
-RasMol is available on **viz** just by common `rasmol`.
+RasMol is available on **viz** just by the common `rasmol`.
 
 ```sh
 rasmol job.mol

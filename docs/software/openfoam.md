@@ -4,7 +4,7 @@
 
 ---
 
-For the example we will use one of the tutorial cases.
+For the example, we will use one of the tutorial cases.
 
 1. Load environment:
 
@@ -13,7 +13,7 @@ For the example we will use one of the tutorial cases.
     module load openfoam
     ```
 
-2. First time users need to create their `$WM_PROJECT_USER_DIR`:
+2. First-time users need to create their `$WM_PROJECT_USER_DIR`:
 
     ```bash
     export WM_PROJECT_USER_DIR=$HOME/OpenFOAM/$USER-$WM_PROJECT_VERSION
@@ -50,7 +50,7 @@ For the example we will use one of the tutorial cases.
 
 ### Interactive single process
 
-For a non-parallel run of the tutorial case, the `decomposeParDict` needs to be removed from `system` directory:
+For a non-parallel run of the tutorial case, the `decomposeParDict` needs to be removed from the `system` directory:
 
 ```bash
 mv system/decomposeParDict system/decomposeParDict-save
@@ -105,7 +105,7 @@ reconstructPar
 
 ---
 
-The geometry and mesh can be either hand-coded using **blockMesh** or with **Gmsh**, **FreeCAD** or **Salome**. When using Gmsh, be sure to save the mesh in v2 ASCII format (see separate page on [CAD-mesh](/software/cad-mesh)). This creates a volume mesh.
+The geometry and mesh can be either hand-coded using **blockMesh** or with **Gmsh**, **FreeCAD**, or **Salome**. When using Gmsh, be sure to save the mesh in v2 ASCII format (see separate page on [CAD-mesh](/software/cad-mesh)). This creates a volume mesh.
 
 To convert a Gmsh volume `.msh` file for OpenFOAM, use
 
@@ -129,7 +129,7 @@ Another possibility is to use CAD for a surface mesh and use the snappyHexMesh u
     touch damBreak.foam
     ```
 
-4. then use the regular ParaView:
+4. Then use the regular ParaView:
 
     ```bash
     paraview
@@ -157,7 +157,7 @@ time mpirun -n $SLURM_NTASKS interFoam -parallel
 
 As the damBreak case is quite small, it is likely that the parallel run is not faster than the sequential, due to the communication overhead.
 
-In a testrun, the results have been as follows:
+In a test run, the results have been as follows:
 
 | time type | sequential | parallel  |
 |-----------|------------|-----------|
@@ -167,11 +167,11 @@ In a testrun, the results have been as follows:
 
 **Lesson to be learned:** Parallel computation is only useful for sufficiently large jobs.
 
-**NOTE: Parallel does not (necessarily) mean faster!!!** Parallel execution introduces overhead (starting threads, communication)! For optimal execution time and optimal use of resources one needs to test and find the sweet spot.
+**NOTE: Parallel does not (necessarily) mean faster!!!** Parallel execution introduces overhead (starting threads, communication)! For optimal execution time and optimal use of resources, one needs to test and find the sweet spot.
 
 ![sweet spot](/software/attachments/of-timing.png)![sweet spot](/software/attachments/of-timing2.png)![sweet spot](/software/attachments/of-timing4.png)
 
-The division into the areas is a combined decision taking into account "real" (wall clock) and "user" (summed time of all threads) time (from the `time` command). "Wall clock" (real) time is the time one needs to wait till the job is finished, "Summed thread time" (user) is the sum of the times that all individual threads needed, it should be roughly user = numtreads x real. For parallel programs, one can expect that "user" time of the parallel run is larger than for the sequential, due to communication overhead, if it is smaller, that probably means the individual threads could make better use of cache.
+The division into the areas is a combined decision taking into account "real" (wall clock) and "user" (summed time of all threads) time (from the `time` command). "Wall clock" (real) time is the time one needs to wait till the job is finished, "Summed thread time" (user) is the sum of the times that all individual threads needed, it should be roughly user = num threads x real. For parallel programs, one can expect that "user" time of the parallel run is larger than for the sequential, due to communication overhead, if it is smaller, that probably means the individual threads could make better use of the cache.
 
 | area | why | explanation |
 |-----------|------------|-----------|
@@ -188,6 +188,6 @@ Recommended in *this* case would be to request 8 threads `-n 8 --ntasks-per-node
 
 ---
 
-- "slurmstepd: error: Detected 1oom-kill event(s) in ": this is a SLURM out-of-memory error: solve by increasing the memory request `--mem=xxGB` where xx is something larger than before
+- "slurmstepd: error: Detected 1 oom-kill event(s) in ": this is a SLURM out-of-memory error: solve by increasing the memory request `--mem=xxGB` where xx is something larger than before
 - a "Bus error" means the software tries to access non-existing memory, this is actually a SLURM out-of-memory error: solve by increasing the memory request `--mem=xxGB` where xx is something larger than before
 - infiniband error: wrong partition, the nodelist contains non-infiniband nodes; or wrong openmpi module

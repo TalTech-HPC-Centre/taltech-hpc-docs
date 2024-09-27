@@ -7,30 +7,30 @@ The client (your desktop) computer needs X11 and Xpra:
 
 **Linux:**
 
-- X11 is default, if you have a graphical desktop, you have X11
-- Xpra should be available in the package manager
+- X11 is default; if you have a graphical desktop, you have X11.
+- Xpra should be available in the package manager.
 
 ---
 
 **Windows:**
 
-- VcXsrv or Xming or Cygwin/X
+- VcXsrv, Xming, or Cygwin/X
 - Xpra client
 
 ---
 
 **Mac:**
 
-- XQuarts needs to be installed ([https://www.xquartz.org/](https://www.xquartz.org/))
+- XQuartz needs to be installed ([xquartz.org](https://www.xquartz.org/))
 - Xpra client
 
-Unlike [VNC](/visualization/vnc), these applications are "rootless". They appear as individual windows inside your window manager rather than being contained within a single window.
+Unlike [VNC](/visualization/vnc), these applications are "rootless." They appear as individual windows inside your window manager rather than being contained within a single window.
 
 ```bash
 xpra start ssh://uni-ID@viz.hpc.taltech.ee/ --start-child=xterm
 ```
 
-Specifying an ssh-key to use and a jump-host:
+Specifying an SSH key to use and a jump host:
 
 ```bash
 xpra start ssh://viz/ --ssh="ssh -J base.hpc.taltech.ee" --start-child=xterm

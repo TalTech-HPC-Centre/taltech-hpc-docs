@@ -3,9 +3,9 @@
 !!! warning
     This page has not been completely updated for Rocky 8 yet!
 
-## cp2k short introduction
+## CP2K Short Introduction
 
-1. Make [cp2k.slurm](/software/attachments/cp2k.slurm) batch script for parallel calculations:
+1. Create a [cp2k.slurm](/software/attachments/cp2k.slurm) batch script for parallel calculations:
 
     ```bash
     #!/bin/bash
@@ -20,41 +20,41 @@
     srun cp2k.psmp -i H2O-32.inp -o H2O-32.out
     ```
 
-2. Copy job-input file [H2O-32.inp](/software/attachments/H2O-32.inp)
+2. Copy the job input file [H2O-32.inp](/software/attachments/H2O-32.inp).
 3. Submit the job on **base**:
 
     ```bash
     sbatch cp2k.slurm
     ```
 
-## cp2k long version
+## CP2K Long Version
 
 ### Environment
 
-Environment is set up by the commands:
+The environment is set up by the commands:
 
 ```bash
 module load green-spack
 module load cp2k
 ```
 
-### Running cp2k jobs
+### Running CP2K Jobs
 
-cp2k is MPI and SMP parallelized, it requires OpenMPI environment to be initialized, which means `mpirun` or `srun` need to be used to start it.
+CP2K is MPI and SMP parallelized; it requires the OpenMPI environment to be initialized, which means `mpirun` or `srun` needs to be used to start it.
 
-## cp2k with GPUs on **amp**
+## CP2K with GPUs on **amp**
 
 ---
 
-The version 7.1 has a bug, use only a single MPI task and a single GPU. For multiple MPI tasks and GPUs (1 GPU per ntask) use version 9.1!
+Version 7.1 has a bug; use only a single MPI task and a single GPU. For multiple MPI tasks and GPUs (1 GPU per task), use version 9.1!
 
-Login to amp or amp2 using ssh (ssh-keys need to be configured)
+Log in to amp or amp2 using SSH (SSH keys need to be configured):
 
 ```bash
 ssh amp2
 ```
 
-Initialize the environment
+Initialize the environment:
 
 ```bash
 source /usr/share/lmod/6.6/init/bash
@@ -65,13 +65,13 @@ module load openmpi/4.1.1-gcc-9.3-amp
 module load cp2k/7.1-gcc-9.3.0-openblas-m7xt
 ```
 
-Either run the job with srun
+Either run the job with `srun`:
 
 ```bash
 srun -p gpu-test --gres=gpu:2 -n 2 --cpus-per-task=1 --mem=16G cp2k.psmp -i H2O-32.inp -o log-H2O-32
 ```
 
-Or better use the [cp2k-gpu.slurm](/software/attachments/cp2k-gpu.slurm) script to submit the job:
+Or better, use the [cp2k-gpu.slurm](/software/attachments/cp2k-gpu.slurm) script to submit the job:
 
 ```bash
 #!/bin/bash

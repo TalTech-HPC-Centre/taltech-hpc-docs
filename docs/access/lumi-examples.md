@@ -2,11 +2,11 @@
 
 Like at HPC, at LUMI, computing resources are allocated to the user by the resource manager Slurm. More about Slurm scripts at LUMI can be found [here](https://docs.lumi-supercomputer.eu/runjobs/scheduled-jobs/slurm-quickstart/).
 
-- At LUMI partitions can be allocated by [node](https://docs.lumi-supercomputer.eu/runjobs/scheduled-jobs/partitions/#slurm-partitions-allocatable-by-node) or by [resources](https://docs.lumi-supercomputer.eu/runjobs/scheduled-jobs/partitions/#slurm-partitions-allocatable-by-resources).
+- At LUMI, partitions can be allocated by [node](https://docs.lumi-supercomputer.eu/runjobs/scheduled-jobs/partitions/#slurm-partitions-allocatable-by-node) or by [resources](https://docs.lumi-supercomputer.eu/runjobs/scheduled-jobs/partitions/#slurm-partitions-allocatable-by-resources).
 
-- **User always has to specify the account.** It is mandatory!
+- **The user always has to specify the account.** It is mandatory!
 
-    Account specification can be done by adding into Slurm script `#SBATCH --account=project_XXX` line or by adding the following two lines into `.bashrc` file by command:
+    Account specification can be done by adding into the Slurm script `#SBATCH --account=project_XXX` line or by adding the following two lines into the `.bashrc` file by command:
 
     ```bash
     cat <<EOT > .bashrc
@@ -17,7 +17,7 @@ Like at HPC, at LUMI, computing resources are allocated to the user by the resou
 
     where `XXX` is a project number which can be found in [ETAIS](https://etais.ee) as `Effective ID`.
 
-- By default, **upon node failure job will be automatically resubmitted to the queue** with the same job ID and that will truncate the previous output. To avoid this add the following two lines into `.bashrc` file by command:
+- By default, **upon node failure, the job will be automatically resubmitted to the queue** with the same job ID and that will truncate the previous output. To avoid this, add the following two lines into the `.bashrc` file by command:
 
     ```bash
     cat <<EOT > .bashrc
@@ -34,7 +34,7 @@ Slurm script examples provided by LUMI:
 - [CPU jobs](https://docs.lumi-supercomputer.eu/runjobs/scheduled-jobs/lumic-job/)
 - [Job array](https://docs.lumi-supercomputer.eu/runjobs/scheduled-jobs/throughput/)
 
-## Multi Node Multi GPU PyTorch Training
+## Multi-Node Multi-GPU PyTorch Training
 
 ---
 
@@ -44,11 +44,11 @@ This PyTorch script simulates training a ResNet model across multiple GPUs and n
 
 1. Download:
       - environment setup script - [env.sh](/access/attachments/env.sh)
-      - bash script setup singularity - [setup.sh](/access/attachments/setup.sh)
+      - bash script to set up Singularity - [setup.sh](/access/attachments/setup.sh)
       - PyTorch script - [min_dist.py](/access/attachments/min_dist.py)
-      - slurm script - [dist_run.slurm](/access/attachments/dist_run.slurm)
+      - Slurm script - [dist_run.slurm](/access/attachments/dist_run.slurm)
 
-2. Setup environment by command:
+2. Set up the environment by command:
 
     ```bash
     . env.sh project_XXX 
@@ -56,13 +56,13 @@ This PyTorch script simulates training a ResNet model across multiple GPUs and n
 
     where `XXX` is a project number.
 
-3. Setup singularity:
+3. Set up Singularity:
 
     ```bash
     ./setup.sh 
     ```
 
-4. Run PyTorch script:
+4. Run the PyTorch script:
 
     ```bash
     sbatch -N 2 dist_run.slurm min_dist.py
@@ -88,13 +88,13 @@ This PyTorch script simulates training a ResNet model across multiple GPUs and n
 Download:
 
 - environment setup script - [env.sh](/access/attachments/env.sh)
-- bash script setup singularity - [setup.sh](/access/attachments/setup.sh)
+- bash script to set up Singularity - [setup.sh](/access/attachments/setup.sh)
 - PyTorch script - [min_dist.py](/access/attachments/min_dist.py)
-- slurm script - [dist_run.slurm](/access/attachments/dist_run.slurm)
+- Slurm script - [dist_run.slurm](/access/attachments/dist_run.slurm)
 
 #### Setup
 
-These commands will setup environment and singularity:
+These commands will set up the environment and Singularity:
 
 ```bash
 . env.sh project_XXX
@@ -105,13 +105,13 @@ where `XXX` is a project number that should be changed according to the user's p
 
 #### Running
 
-Job can be submitted into queue by command:
+The job can be submitted into the queue by command:
 
 ```bash
 sbatch -N 2 dist_run.slurm min_dist.py
 ```
 
-Where `dist_run.slurm` is a resource manager, `min_dist.py` is a PyTorch script and `-N` is the number of nodes used.
+Where `dist_run.slurm` is a resource manager, `min_dist.py` is a PyTorch script, and `-N` is the number of nodes used.
 
 ```bash
 #!/bin/bash
@@ -147,4 +147,5 @@ srun singularity exec --rocm \
 
 The environment variables containing `NCCL` and `CXI` are used by RCCL for communication over Slingshot.
 
-The ones containing `MIOPEN` are for [MIOpen](https://rocmsoftwareplatform.github.io/MIOpen/doc/html/index.html) to create its caches in the `/tmp` (which is local to each node and in memory). If this is not set then MIOpen will create its cache in the user home directory (the default) which is a problem since each node needs its own cache.
+The ones containing `MIOPEN` are for [MIOpen](https://rocmsoftwareplatform.github.io/MIOpen/doc/html/index.html) to create its caches in the `/tmp` (which is local to each node and in memory). If this is not set, then MIOpen will create its cache in the user home directory (the default), which is a problem since each node needs its own cache.
+

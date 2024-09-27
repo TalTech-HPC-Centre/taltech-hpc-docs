@@ -3,13 +3,13 @@
 !!! warning
     This page has not been completely updated for Rocky 8 yet!
 
-The client (your desktop) computer needs the [X2GO-client](https://www.x2go.org)
+The client (your desktop) computer needs the [X2GO-client](https://www.x2go.org).
 
-**NB!** _X2GO uses ssh-key. Ssh-key generation guide is [here](/access/ssh)._
+**NB!** _X2GO uses SSH-key. The SSH-key generation guide is [here](/access/ssh)._
 
-**NB!** _To use **viz** the ssh-key must be added to the **base** node._
+**NB!** _To use **viz**, the SSH-key must be added to the **base** node._
 
-On Mac and Linux this can be done by command:
+On Mac and Linux, this can be done with the command:
 
 ```sh
 ssh-copy-id Uni-ID@base.hpc.taltech.ee
@@ -21,14 +21,14 @@ After about an hour, when the automatic script has synced the files, you can use
 
 ## Configuring the client
 
-During first use, X2GO-client needs to be configured as shown in the picture. To configure, select the "Session" tab in the upper left corner.
-The setting of the ssh-key is only necessary if you use a non-standard name or not the default key.
+During the first use, X2GO-client needs to be configured as shown in the picture. To configure, select the "Session" tab in the upper left corner.
+Setting the SSH-key is only necessary if you use a non-standard name or not the default key.
 
 ![Configuration](/visualization/attachments/x2go-config-1.png)
 
-Large memory-consuming Desktop environments like MATE, KDE, GNOME are **not** available. Use window managers like `blackbox`, `fluxbox`, `jwm`, `fvwm2`, `awesome`, `lwm`, `fvwm-crystal` (last setting on the screen).
+Large memory-consuming desktop environments like MATE, KDE, and GNOME are **not** available. Use window managers like `blackbox`, `fluxbox`, `jwm`, `fvwm2`, `awesome`, `lwm`, and `fvwm-crystal` (last setting on the screen).
 
-If you select `Terminal` as "Session type" (use "fvwm2" as Command), you will get a "rootless" xterm and you can use that to start other software which will appear as individual windows on your regular desktop (not within a remote desktop window).
+If you select `Terminal` as the "Session type" (use "fvwm2" as the Command), you will get a "rootless" xterm, and you can use that to start other software which will appear as individual windows on your regular desktop (not within a remote desktop window).
 
 It is also recommended to configure the display settings, for example, as done in the example below or in some other suitable way, since changing the resolution of the remote desktop (= window size) at runtime is not possible (resizing the window would be the equivalent of stretching your physical monitor) or can have other undesired effects.
 
@@ -60,7 +60,7 @@ When the session is configured, press `enter` to run the session. Press the left
 
 ![XTerm](/visualization/attachments/XTerm.png)
 
-A terminal will appear where the user can call the desired visualization program. We do *not* maintain the list of software in the menus of window managers or desktop environments, which means even with a graphical frontend, you still need to use the command-line to start your programs! You can configure the menus yourself, e.g., in the `$HOME/.fvwm/.fvwm2rc` file for the fvwm window manager.
+A terminal will appear where the user can call the desired visualization program. We do *not* maintain the list of software in the menus of window managers or desktop environments, which means even with a graphical frontend, you still need to use the command line to start your programs! You can configure the menus yourself, e.g., in the `$HOME/.fvwm/.fvwm2rc` file for the fvwm window manager.
 
 **Viz** has a module system. Most of the modules need to be loaded unless the manual says they are native.
 
@@ -102,7 +102,7 @@ paraview
 
 It is extremely important to end the session properly! To do this:
 
-1. Print `exit` in your terminal
+1. Type `exit` in your terminal.
 2. Click the left mouse button, call the menu, and choose `Exit fvwm`.
 
 ![exit](/visualization/attachments/x2go-exit.png)

@@ -1,7 +1,7 @@
 # Gaussian
 
 !!! info
-    To run Gaussian, user should be added to the Gaussian group. Contact [hpcsupport@taltech.ee](mailto:hpcsupport@taltech.ee) to be added.
+    To run Gaussian, the user should be added to the Gaussian group. Contact [hpcsupport@taltech.ee](mailto:hpcsupport@taltech.ee) to be added.
 
 ---
 
@@ -33,7 +33,7 @@
     rm -rf $SCRATCH
     ```
 
-2. Copy job-input file [job.com](/software/attachments/job.com).
+2. Copy the job-input file [job.com](/software/attachments/job.com).
 
 3. Submit the job on **base**:
 
@@ -41,7 +41,7 @@
     sbatch gaussian.slurm
     ```
 
-    **NB!** _More cores does not mean faster!!! See [benchmarks](#benchmarks-for-parallel-jobs)._
+    **NB!** _More cores do not mean faster!!! See [benchmarks](#benchmarks-for-parallel-jobs)._
 
 4. Check results using [visualization software](/visualization/visualization).
 
@@ -49,11 +49,11 @@
 
 ## Gaussian long version
 
-[Gaussian](https://gaussian.com/g16main/) is a general purpose package for calculation of electronic structures. It can calculate properties of molecules (structures, energies, spectroscopic and thermochemical properties, atomic charges, electron affinities, electrostatic potentials, electron densities etc.) as well as reactions properties (such as reaction pathways, IRC) using different methods (such as Molecular mechanics, Semi-empirical methods, Hartree-Fock, Density functional theory, Møller-Plesset perturbation theory, coupled cluster). More about Gaussian features can be found [here](https://gaussian.com/g16glance/).
+[Gaussian](https://gaussian.com/g16main/) is a general-purpose package for the calculation of electronic structures. It can calculate properties of molecules (structures, energies, spectroscopic and thermochemical properties, atomic charges, electron affinities, electrostatic potentials, electron densities, etc.) as well as reaction properties (such as reaction pathways, IRC) using different methods (such as Molecular mechanics, Semi-empirical methods, Hartree-Fock, Density functional theory, Møller-Plesset perturbation theory, coupled cluster). More about Gaussian features can be found [here](https://gaussian.com/g16glance/).
 
 ### Environment
 
-There are several versions of Gaussian available at HPC: g09 (revision C.01) and g16 (revision B.01, C.01 and C.02). Environment and Gaussian version are set up by the commands:
+There are several versions of Gaussian available at HPC: g09 (revision C.01) and g16 (revisions B.01, C.01, and C.02). The environment and Gaussian version are set up by the commands:
 
 ```bash
 module load rocky8/all
@@ -62,7 +62,7 @@ module load gaussian/16.c02
 
 ### Running Gaussian jobs
 
-Gaussian input files are executed by the commands `g09` or `g16` depending on the version of Gaussian used. This command is usually placed in `slurm` script.
+Gaussian input files are executed by the commands `g09` or `g16` depending on the version of Gaussian used. This command is usually placed in the `slurm` script.
 
 ```bash
 g16 < job.com > job.log
@@ -72,13 +72,13 @@ g16 < job.com > job.log
 
 Gaussian by default executes jobs on only a single processor.
 
-**NB!** _If more processors are defined in `slurm` script, they will be reserved but not used._
+**NB!** _If more processors are defined in the `slurm` script, they will be reserved but not used._
 
 #### Parallel jobs
 
-To run multiple processors/cores job a number of cores should be specified. The number of cores can be defined via the `-p` flag (e.g. -p=4) in command line of `slurm` script or by adding the `%NprocShared` keyword into Gaussian input file (e.g. %NprocShared=4). For more information see [Gaussian manual](https://gaussian.com/running/). The number of processors requested should correspond to the number of processors requested in `slurm` script.
+To run multiple processors/cores job, a number of cores should be specified. The number of cores can be defined via the `-p` flag (e.g. -p=4) in the command line of the `slurm` script or by adding the `%NprocShared` keyword into the Gaussian input file (e.g. %NprocShared=4). For more information see the [Gaussian manual](https://gaussian.com/running/). The number of processors requested should correspond to the number of processors requested in the `slurm` script.
 
-**NB!** _More cores does not mean faster!!! See [benchmarks](#benchmarks-for-parallel-jobs)._
+**NB!** _More cores do not mean faster!!! See [benchmarks](#benchmarks-for-parallel-jobs)._
 
 Example of `slurm` script:
 
@@ -126,9 +126,9 @@ H         -1.58104        1.05112       -0.00371
 
 ### Memory
 
-The default dynamic memory requested by Gaussian is frequently too small for successful job termination. Herein, if amount of memory requested is insufficient, the job will crash. There is no golden rule for memory requests. Usually, for common calculations (e.g. optimization, frequency etc.) 2 GB per 1 core is sufficient. This can be done by the `-m` flag in the command line (e.g. -m=48gb) or by adding the `%Mem` keyword in Gaussian input file (e.g. %Mem=2GB). For more information see [Gaussian manual](https://gaussian.com/running/) and [taltech user-guides](/#hardware-specification).
+The default dynamic memory requested by Gaussian is frequently too small for successful job termination. Herein, if the amount of memory requested is insufficient, the job will crash. There is no golden rule for memory requests. Usually, for common calculations (e.g. optimization, frequency, etc.) 2 GB per 1 core is sufficient. This can be done by the `-m` flag in the command line (e.g. -m=48gb) or by adding the `%Mem` keyword in the Gaussian input file (e.g. %Mem=2GB). For more information see the [Gaussian manual](https://gaussian.com/running/) and [taltech user-guides](/#hardware-specification).
 
-However, there are calculations that require more memory (e.g TD-DFT, large SCF calculations, etc.). Data from a `slurm-JOBID.stat` file can be useful to determine the amount of memory required for a computation. In `slurm-JOBID.stat` file the efficiency of memory utilization is shown.
+However, there are calculations that require more memory (e.g. TD-DFT, large SCF calculations, etc.). Data from a `slurm-JOBID.stat` file can be useful to determine the amount of memory required for a computation. In the `slurm-JOBID.stat` file, the efficiency of memory utilization is shown.
 
 Bad example:
 
@@ -146,17 +146,17 @@ Memory Efficiency: 98.62% of 64.00 GB
 
 ### Time
 
-Time limits depend on [time partition](/#hardware-specification) used. If calculation time exceeds the time limit requested in the `slurm` script, the job will be killed, and in the end of `slurm-JOBID.out` will be written "error: ***JOB 317255 ON green23 CANCELLED AT 2023-08-11T22:28:01 DUE TO TIME LIMIT***"
+Time limits depend on the [time partition](/#hardware-specification) used. If the calculation time exceeds the time limit requested in the `slurm` script, the job will be killed, and at the end of `slurm-JOBID.out` will be written "error: ***JOB 317255 ON green23 CANCELLED AT 2023-08-11T22:28:01 DUE TO TIME LIMIT***"
 
-Therefore, it is recommended to request more time than is usually needed for calculation and create checkpoint files (by `%chk=job.chk` line in input file) that allows to restart job.
+Therefore, it is recommended to request more time than is usually needed for the calculation and create checkpoint files (by `%chk=job.chk` line in the input file) that allow restarting the job.
 
 ### Using GPUs
 
-GPUs **are effective** for large molecules, their energies, gradients and frequencies calculations. GPUs **are not effective** for small jobs, as well as for MP2 or CCSD calculations.
+GPUs **are effective** for large molecules, their energies, gradients, and frequencies calculations. GPUs **are not effective** for small jobs, as well as for MP2 or CCSD calculations.
 
-GPU jobs can be run only on **amp** or **amp2**. To access **amp** user has to have ssh-keys copied to the **base** ([how to do that](/access/ssh)).
+GPU jobs can be run only on **amp** or **amp2**. To access **amp** the user has to have ssh-keys copied to the **base** ([how to do that](/access/ssh)).
 
-**amp** can be accessed by command:
+**amp** can be accessed by the command:
 
 ```bash
 ssh -J uni-ID@base.hpc.taltech.ee uni-ID@amp
@@ -164,14 +164,15 @@ ssh -J uni-ID@base.hpc.taltech.ee uni-ID@amp
 
 Each GPU must be controlled by a specific CPU, wherein, CPUs used as GPU controllers do not participate as compute nodes during the calculations.
 
-The GPUs and CPUS used for calculations are specified with the `%GPUCPU` command, where gpu- and cpu-lists are a comma-separated lists, possibly including numerical ranges (e.g., 0-4,6). The corresponding items in the two lists are the GPU and its controlling CPU.
+The GPUs and CPUs used for calculations are specified with the `%GPUCPU` command, where gpu- and cpu-lists are comma-separated lists, possibly including numerical ranges (e.g., 0-4,6). The corresponding items in the two lists are the GPU and its controlling CPU.
 
 ```plaintext
 %cpu=0-9
 %gpucpu=0-1=0-1
 ```
 
-**NB!** _The controlling CPUs are included in `%CPU` command._  
+**NB!** _The controlling CPUs are included in the `%CPU` command._
+
 **NB!** _The GPU and CPU count starts from zero._
 
 Example of [gaussian-gpu.slurm](/software/attachments/gaussian-gpu.slurm) script for **amp**:
@@ -202,7 +203,7 @@ g16 job.com > job.log
 rm -rf $SCRATCH
 ```
 
-Example of Gaussian input [job-gpu.com](/software/attachments/job-gpu.com) (bad example, since molecule is small):
+Example of Gaussian input [job-gpu.com](/software/attachments/job-gpu.com) (bad example, since the molecule is small):
 
 ```plaintext
 %mem=160GB
@@ -246,13 +247,13 @@ H                  6.31606730   -1.04822960    0.70571860
 
 #### Allocation of memory
 
-Allocating sufficient amounts of memory for GPU jobs is even more important when for CPU jobs. GPUs can have up to 40GB (**amp1**) and 80GB (**amp2**) of memory, wherein, must be at least an equal amount of memory given to the GPU and each control CPU thread from available 1 TB of RAM.
+Allocating sufficient amounts of memory for GPU jobs is even more important than for CPU jobs. GPUs can have up to 40GB (**amp1**) and 80GB (**amp2**) of memory, wherein, at least an equal amount of memory must be given to the GPU and each control CPU thread from the available 1 TB of RAM.
 
-Gaussian gives equal shares of memory to each thread, this means that the total memory allocated should be the number of threads times the memory required.
+Gaussian gives equal shares of memory to each thread, which means that the total memory allocated should be the number of threads times the memory required.
 
 ### Restarting a failed/interrupted calculation
 
-Killed or failed jobs can be restarted, but for this checkpoint file should be generated via a `%Chk` command within the Gaussian input file. For more information see [Gaussian FAQ](https://gaussian.com/faq2/), [Gaussian restart](https://gaussian.com/restart/) and [Using Gaussian Checkpoint Files](http://www.ccl.net/cca/documents/dyoung/topics-orig/checkpoint.html).
+Killed or failed jobs can be restarted, but for this, a checkpoint file should be generated via a `%Chk` command within the Gaussian input file. For more information see [Gaussian FAQ](https://gaussian.com/faq2/), [Gaussian restart](https://gaussian.com/restart/) and [Using Gaussian Checkpoint Files](http://www.ccl.net/cca/documents/dyoung/topics-orig/checkpoint.html).
 
 **NB!** _Checkpoint files are very heavy and are readable only on the machine on which they were generated. After successful completion of the calculation, it is recommended to delete these files._
 

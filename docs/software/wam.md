@@ -5,7 +5,7 @@
 
 WAM is a third-generation wave model that describes the evolution of the wave spectrum by solving the wave energy transfer equation. WAM predicts wave direction spectra and properties and can be linked to a number of other models.
 
-A repository of the source code with modifications for Taltech HPC, can be found [here](https://gitlab.cs.ttu.ee/heiko.herrmann/wam-cycle_6-TalTech-HPC).
+A repository of the source code with modifications for Taltech HPC can be found [here](https://gitlab.cs.ttu.ee/heiko.herrmann/wam-cycle_6-TalTech-HPC).
 
 ## How to cite
 
@@ -24,7 +24,7 @@ DOI: [https://doi.org/10.1175/1520-0485(1988)018<1775:TWMTGO>2.0.CO;2](https://j
     srun -t 2:0:0 --pty bash
     ```
 
-2. Enter the following commands to set up environment and working directory:
+2. Enter the following commands to set up the environment and working directory:
 
     ```bash
     module load green/all
@@ -43,7 +43,7 @@ DOI: [https://doi.org/10.1175/1520-0485(1988)018<1775:TWMTGO>2.0.CO;2](https://j
     cp ${WAMDIR}/const/WIND_INPUT.DAT .
     ```
 
-3. Run WAM
+3. Run WAM:
 
     ```bash
     mpirun wam
@@ -64,7 +64,7 @@ DOI: [https://doi.org/10.1175/1520-0485(1988)018<1775:TWMTGO>2.0.CO;2](https://j
     mpirun pnetcdf
     ```
 
-4. Adapt the WORKDIR, LOGDIR and output directories to your needs!
+4. Adapt the WORKDIR, LOGDIR, and output directories to your needs!
 
 5. If calculations are going normally, you should have the following files in your `$WORK` directory:
 
@@ -79,7 +79,7 @@ DOI: [https://doi.org/10.1175/1520-0485(1988)018<1775:TWMTGO>2.0.CO;2](https://j
     C0219780908060000  OUT19780906060000      Time_Prot          pnetcdf_prot
     ```
 
-6. To visualise results you can open the `WAVE*.nc` file for example in Octave or Matlab.
+6. To visualize results, you can open the `WAVE*.nc` file, for example, in Octave or Matlab.
 
     ```matlab
     pkg load netcdf
@@ -149,13 +149,13 @@ mpirun pnetcdf
 
 ### Starting calculations
 
-If job is small it can be run as an interactive session:
+If the job is small, it can be run as an interactive session:
 
 ```bash
 srun -t 2:0:0 --pty bash
 ```
 
-If calculation is long or needs several cores, it is better to gather all needed commands in one [wam.slurm](/software/attachments/wam.slurm) batch script and submit it by command:
+If the calculation is long or needs several cores, it is better to gather all needed commands in one [wam.slurm](/software/attachments/wam.slurm) batch script and submit it with the command:
 
 ```bash
 sbatch wam.slurm
@@ -163,14 +163,14 @@ sbatch wam.slurm
 
 ### Preparation
 
-1. Firstly, user needs to load proper environment by commands:
+1. Firstly, the user needs to load the proper environment with the commands:
 
     ```bash
     module load green
     module load WAM
     ```
 
-2. After it is needed to determine working directory and go into it:
+2. After that, it is needed to determine the working directory and go into it:
 
     ```bash
     export WORK=$HOME/newwamtest
@@ -178,7 +178,7 @@ sbatch wam.slurm
     cd ${WORK}/tempsg
     ```
 
-3. Copy into working directory all needed data, for example:
+3. Copy into the working directory all needed data, for example:
 
     ```bash
     cp ${WAMDIR}/const/TOPOCAT.DAT .
@@ -191,13 +191,13 @@ sbatch wam.slurm
 
 ### Running WAM
 
-WAM calculations can be started by command `WAM`.
+WAM calculations can be started with the command `WAM`.
 
 ```bash
 mpirun wam
 ```
 
-To run calculations normally, such parameters as grid (`pgrid`), time (`ptime`), spectra (`pspec`), time step (`ptime_S`) and (`pnetcdf`) should be defined or copy from example:
+To run calculations normally, such parameters as grid (`pgrid`), time (`ptime`), spectra (`pspec`), time step (`ptime_S`), and (`pnetcdf`) should be defined or copied from the example:
 
 ```bash
 cp ${WAMDIR}/const/Coarse_Grid/ARD/Grid_User .
@@ -229,9 +229,9 @@ C0219780907060000  NETCDF_User            TOPOCAT.DAT        WIND_INPUT.DAT
 C0219780908060000  OUT19780906060000      Time_Prot          pnetcdf_prot
 ```
 
-### Visualisation
+### Visualization
 
-To visualise results you can open the `WAVE*.nc` file for example in Octave or Matlab:
+To visualize results, you can open the `WAVE*.nc` file, for example, in Octave or Matlab:
 
 ```matlab
 pkg load netcdf

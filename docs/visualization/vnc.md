@@ -13,7 +13,7 @@
     ssh uni-ID@viz.hpc.taltech.ee
     ```
 
-2. Start VNC on **viz** by command:
+2. Start VNC on **viz** with the command:
 
     ```sh
     vncserver -geometry 1265x980
@@ -26,17 +26,17 @@
     ```
 
     where `XX` is the display number that appears after giving the `vncserver` command.
-    **NB!** _`XX` is always the number of two digits (e.g. `01` for `:1`)_
+    **NB!** _`XX` is always a two-digit number (e.g., `01` for `:1`)_
 
-4. On your desktop start a vncviewer
+4. On your desktop, start a vncviewer:
 
     ```sh
     vncviewer :XX
     ```
 
-    where `XX` is the display number
+    where `XX` is the display number.
 
-5. **Stop the vncserver!!!** on **viz** by command:
+5. **Stop the vncserver!!!** on **viz** with the command:
 
     ```sh
     vncserver -kill :XX
@@ -58,7 +58,7 @@ The client (your desktop) computer needs a vncviewer:
 
 ### First time use
 
-On the first start, VNC asks to specify a password to connect to the server. Choose a secure one, which does not match your HPC/UniID password because VNC connections are not encrypted!
+On the first start, VNC asks you to specify a password to connect to the server. Choose a secure one that does not match your HPC/UniID password because VNC connections are not encrypted!
 
 ![vnc-host-0](/visualization/attachments/vnc-host-0.png)
 
@@ -66,25 +66,25 @@ On the first start, VNC asks to specify a password to connect to the server. Cho
 
 ## VNC Long version
 
-VNC should be run firstly at **viz** node of HPC and after at the user's computer.
+VNC should be run first on the **viz** node of HPC and then on the user's computer.
 
-1. Connect to **viz** by command:
+1. Connect to **viz** with the command:
 
     ```sh
     ssh uni-ID@viz.hpc.taltech.ee
     ```
 
-    If this command does not work, try to connect through jump host:
+    If this command does not work, try to connect through the jump host:
 
     ```sh
     ssh -J uni-ID@base.hpc.taltech.ee uni-ID@viz 
     ```
 
-    **NB!** _Connection to **viz** can be done **only** with SSH keys. SSH key generation guide is [here](/access/ssh)._
+    **NB!** _Connection to **viz** can be done **only** with SSH keys. The SSH key generation guide is [here](/access/ssh)._
 
-    **NB!** _To use **viz** the SSH key must be added to the **base** node._
+    **NB!** _To use **viz**, the SSH key must be added to the **base** node._
 
-    On Mac and Linux this can be done by command:
+    On Mac and Linux, this can be done with the command:
 
     ```sh
     ssh-copy-id Uni-ID@base.hpc.taltech.ee
@@ -92,7 +92,7 @@ VNC should be run firstly at **viz** node of HPC and after at the user's compute
 
     After about an hour, when the automatic script has synced the files, you can use **viz**.
 
-2. On **viz** start the VNC server. Depending on which VNC client user has, one of those commands should be given:
+2. On **viz**, start the VNC server. Depending on which VNC client the user has, one of these commands should be given:
 
     ```sh
     vncserver -geometry 1265x980
@@ -104,7 +104,7 @@ VNC should be run firstly at **viz** node of HPC and after at the user's compute
     tigervncserver -geometry 1280x1024
     ```
 
-    It is recommended to specify window size as well by `-geometry` flag, since changing the resolution of the remote desktop (= window size) at runtime can have undesired effects.
+    It is recommended to specify the window size as well with the `-geometry` flag, since changing the resolution of the remote desktop (= window size) at runtime can have undesired effects.
 
 3. The output in the terminal will show on which display VNC is running.
 
@@ -118,15 +118,15 @@ VNC should be run firstly at **viz** node of HPC and after at the user's compute
     ssh -L 59XX:localhost:50XX uni-ID@viz.hpc.taltech.ee
     ```
 
-    where `XX` is the display number as two digits (e.g. `01` for `:1`)
+    where `XX` is the display number as two digits (e.g., `01` for `:1`).
 
-    **NB!** _If you were connected through jump host this command should be given:_
+    **NB!** _If you were connected through the jump host, this command should be given:_
 
     ```sh
     ssh -J Uni-ID@base.hpc.taltech.ee -L 59XX:127.0.0.1:59XX Uni-ID@viz
     ```
 
-5. On **your desktop** start a VNC viewer. If you do it from the terminal, give one of these commands depending on which VNC viewer you have:
+5. On **your desktop**, start a VNC viewer. If you do it from the terminal, give one of these commands depending on which VNC viewer you have:
 
     ```sh
     vncviewer :XX
@@ -138,17 +138,17 @@ VNC should be run firstly at **viz** node of HPC and after at the user's compute
     xtigervncviewer localhost:XX
     ```
 
-    where `XX` is the number from above. On Windows (depending on the VNC-client) the address to connect to could be `localhost::50XX` (again, the `XX` stands for the display/port as specified before).
+    where `XX` is the number from above. On Windows (depending on the VNC client), the address to connect to could be `localhost::50XX` (again, the `XX` stands for the display/port as specified before).
 
     If you use a graphical interface, specify localhost in the corresponding field (line at the top) and click the "Continue" button.
 
     ![vnc-1](/visualization/attachments/vnc-1.png)
 
-    Type password.
+    Type the password.
 
     ![vnc-2](/visualization/attachments/vnc-2.png)
 
-    If you see a monochromic field and cannot start a session, it means that you need to set up your VNC session: [Setting up VNC config](#setting-up-vnc-session).
+    If you see a monochromatic field and cannot start a session, it means that you need to set up your VNC session: [Setting up VNC config](#setting-up-vnc-session).
 
     If you see a terminal, then everything is done correctly and you can start working. Within the session window, you can start any program from the terminal or using the menus of the window manager.
 
@@ -202,7 +202,7 @@ tigervncserver -kill :XX
 
 where `XX` is the display number.
 
-Running sessions can be checked by command:
+Running sessions can be checked with the command:
 
 ```sh
 vncserver -list
@@ -223,7 +223,7 @@ fvwm2
 EOT
 ```
 
-This will configure the automatic startup of `xterm` and `fvwm2` window manager. Alternatively, the user can use other window managers: more desktop-like -- `fluxbox`, `awesome` or `jwm` or tiling -- `i3`, `xmonad` or `tritium`. To do this, the corresponding line must be added to the `.xsession` file by command:
+This will configure the automatic startup of `xterm` and the `fvwm2` window manager. Alternatively, the user can use other window managers: more desktop-like -- `fluxbox`, `awesome`, or `jwm` or tiling -- `i3`, `xmonad`, or `tritium`. To do this, the corresponding line must be added to the `.xsession` file with the command:
 
 ```sh
 echo "fluxbox" >> .xsession

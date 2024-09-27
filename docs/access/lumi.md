@@ -4,12 +4,12 @@
 
 LUMI is the fastest supercomputer in Europe. It's an HPE Cray EX supercomputer consisting of several hardware partitions targeted at different use cases:
 
-- 2560 GPU-based nodes ([**LUMI-G**](https://docs.lumi-supercomputer.eu/hardware/lumig/)), each node with one 64 core AMD Trento CPU and four AMD MI250X GPUs.
-- 1536 dual-socket CPU nodes [**LUMI-C**](https://docs.lumi-supercomputer.eu/hardware/lumic/) with 64-core 3rd-generation AMD EPYC™ CPUs, and between 256 GB and 1024 GB of memory.
-- Large memory GPU nodes [**LUMI-D**](https://docs.lumi-supercomputer.eu/hardware/lumid/), with a total of 32 TB of memory in the partition for data analytics and visualization.
-- Main storage - [**LUMI-P**](https://docs.lumi-supercomputer.eu/storage/parallel-filesystems/lumip/) has 4 independent Lustre file systems with 20 PB and an aggregate bandwidth of 240 GB/s each. Each Lustre file system is composed of 1 MDS (metadata server) and 32 Object Storage Targets (OSTs).
-- Flash storage - [**LUMI-F**](https://docs.lumi-supercomputer.eu/storage/parallel-filesystems/lumif/) has a Lustre file system with a storage capacity of 8 PB and an aggregate bandwidth of 1 740 GB/s.
-- Object store - [**LUMI-O**](https://docs.lumi-supercomputer.eu/storage/lumio/) provides 30 PB storage.
+- 2560 GPU-based nodes ([**LUMI-G**](https://docs.lumi-supercomputer.eu/hardware/lumig/)), each node with one 64-core AMD Trento CPU and four AMD MI250X GPUs.
+- 1536 dual-socket CPU nodes ([**LUMI-C**](https://docs.lumi-supercomputer.eu/hardware/lumic/)) with 64-core 3rd-generation AMD EPYC™ CPUs, and between 256 GB and 1024 GB of memory.
+- Large memory GPU nodes ([**LUMI-D**](https://docs.lumi-supercomputer.eu/hardware/lumid/)), with a total of 32 TB of memory in the partition for data analytics and visualization.
+- Main storage - ([**LUMI-P**](https://docs.lumi-supercomputer.eu/storage/parallel-filesystems/lumip/)) has 4 independent Lustre file systems with 20 PB and an aggregate bandwidth of 240 GB/s each. Each Lustre file system is composed of 1 MDS (metadata server) and 32 Object Storage Targets (OSTs).
+- Flash storage - ([**LUMI-F**](https://docs.lumi-supercomputer.eu/storage/parallel-filesystems/lumif/)) has a Lustre file system with a storage capacity of 8 PB and an aggregate bandwidth of 1,740 GB/s.
+- Object store - ([**LUMI-O**](https://docs.lumi-supercomputer.eu/storage/lumio/)) provides 30 PB of storage.
 
 More about LUMI system architecture can be found in the [overview](https://docs.lumi-supercomputer.eu/hardware/) and [LUMI’s full system architecture](https://www.lumi-supercomputer.eu/lumis-full-system-architecture-revealed/).
 
@@ -19,13 +19,13 @@ LUMI uses Slurm as a job scheduler and resource manager. Slurm partitions can be
 
 There are several reasons to choose LUMI instead of HPC:
 
-- If the job is run using GPUs
-- If the job needs large memory
-- If the queue on HPC is too long
+- If the job is run using GPUs.
+- If the job needs large memory.
+- If the queue on HPC is too long.
 
 ## Getting started
 
 - [How to get access to LUMI](/access/lumi-start)
 - [Software](/access/lumi-software)
-- [Examples of jobs and slurm scripts](/access/lumi-examples)
+- [Examples of jobs and Slurm scripts](/access/lumi-examples)
 - [Billing](/#billing)

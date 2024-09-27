@@ -3,13 +3,13 @@
 !!! warning
     This page is a work in progress!
 
-## Multiwfn short introduction
+## Multiwfn Short Introduction
 
 ---
 
 1. Make Multiwfn input `.mwfn`, `.wfn`, `.wfx`, `.fch`, `.molden`, `.gms` (or `.cub`, `.grd`, `.pdb`, `.xyz`, `.mol` - for specific purposes).
 
-2. Access **viz** by [remote access programs](/visualization/visualization) (more preferable) or by ssh protocol (less preferable):
+2. Access **viz** by [remote access programs](/visualization/visualization) (more preferable) or by SSH protocol (less preferable):
 
     ```sh
     ssh -X -Y -J UNI-ID@base.hpc.taltech.ee UNI-ID@viz
@@ -28,7 +28,7 @@
     srun Multiwfn job.wfn
     ```
 
-    Multiwfn also can be run by [multiwfn.slurm](/software/attachments/multiwfn.slurm) batch script as a non-interactive mode with pre-prepared responses:
+    Multiwfn can also be run by [multiwfn.slurm](/software/attachments/multiwfn.slurm) batch script in non-interactive mode with pre-prepared responses:
 
     ```sh
     #!/bin/bash
@@ -57,7 +57,7 @@
     EOF
     ```
 
-    In this case job is submitted using `sbatch` command:
+    In this case, the job is submitted using the `sbatch` command:
 
     ```sh
     sbatch multiwfn.slurm
@@ -77,56 +77,56 @@
     vmd job.pdb
     ```
 
-    **NB!** It is recommended to visualize Multiwfn results in VMD program, corresponding scripts are provided in Multiwfn examples _(/gpfs/mariana/software/green/MultiWFN/Multiwfn_3.7_bin_Linux/examples/)_.
+    **NB!** It is recommended to visualize Multiwfn results in the VMD program. Corresponding scripts are provided in Multiwfn examples _(/gpfs/mariana/software/green/MultiWFN/Multiwfn_3.7_bin_Linux/examples/)_.
 
 ---
 
-## Multiwfn long version
+## Multiwfn Long Version
 
 ---
 
 ### Options
 
-Multiwfn is an interactive program performing almost all of important wavefunction analyses _(showing molecular structure and orbitals, calculating real space function, topology analysis, population analysis, orbital composition analysis, bond order/strength analysis, plotting population density-of-states, plotting various kinds of spectra (including conformational weighted spectrum), quantitative analysis of molecular surface, charge decomposition analysis, basin analysis, electron excitation analyses, orbital localization analysis, visual study of weak interaction, conceptual density functional theory (CDFT) analysis, energy decomposition analysis)_.
+Multiwfn is an interactive program performing almost all important wavefunction analyses _(showing molecular structure and orbitals, calculating real space function, topology analysis, population analysis, orbital composition analysis, bond order/strength analysis, plotting population density-of-states, plotting various kinds of spectra (including conformational weighted spectrum), quantitative analysis of molecular surface, charge decomposition analysis, basin analysis, electron excitation analyses, orbital localization analysis, visual study of weak interaction, conceptual density functional theory (CDFT) analysis, energy decomposition analysis)_.
 
-For many frequently used analyses Multiwfn has [short youtube videos](https://www.youtube.com/user/sobereva) and "quick start" examples _(/gpfs/mariana/software/green/MultiWFN/Multiwfn_3.7_bin_Linux/examples/)._ More information can be found in the [manual](/software/attachments/Manual_Multiwfn.pdf).
+For many frequently used analyses, Multiwfn has [short YouTube videos](https://www.youtube.com/user/sobereva) and "quick start" examples _(/gpfs/mariana/software/green/MultiWFN/Multiwfn_3.7_bin_Linux/examples/)._ More information can be found in the [manual](/software/attachments/Manual_Multiwfn.pdf).
 
 ### Input
 
-As an input Multiwfn uses output files of other quantum chemistry programs, including Gaussian, ORCA, GAMESS-US, NWChem, xtb, Turbomole. For example, `.wfn` (wavefunction file), `.fch` (Gaussian check file), `.molden` (Molden input file), `.gms` (GAMESS-US output file), `.mwfn` (Multiwfn wavefunction file). Other types of files, such as `.cub`, `.grd`, `.pdb`, `.xyz`, `.log`, `.out` and `.mol` files, may be used in certain cases and purposes.
+As input, Multiwfn uses output files of other quantum chemistry programs, including Gaussian, ORCA, GAMESS-US, NWChem, xtb, Turbomole. For example, `.wfn` (wavefunction file), `.fch` (Gaussian check file), `.molden` (Molden input file), `.gms` (GAMESS-US output file), `.mwfn` (Multiwfn wavefunction file). Other types of files, such as `.cub`, `.grd`, `.pdb`, `.xyz`, `.log`, `.out`, and `.mol` files, may be used in certain cases and purposes.
 
 ### Environment
 
-On **viz** environment is set up by the commands:
+On **viz**, the environment is set up by the commands:
 
 ```sh
 module use /gpfs/mariana/modules/green/chemistry/
 module load MultiWFN/3.7
 ```
 
-The first time use, user has to agree to the licenses:
+For the first-time use, the user has to agree to the licenses:
 
 ```sh
 touch ~/.licenses/multiwfn-accepted
 ```
 
-if this is the first user license agreement, the following commands should be given:
+If this is the first user license agreement, the following commands should be given:
 
 ```sh
 mkdir .licenses
 touch ~/.licenses/multiwfn-accepted
 ```
 
-**NB!** After agreeing to the license, user has to log out and log in again to be able run `Multiwfn`.
+**NB!** After agreeing to the license, the user has to log out and log in again to be able to run `Multiwfn`.
 
-On **base** environment is set up by the commands:
+On **base**, the environment is set up by the commands:
 
 ```sh
 module load rocky8/all
 module load MultiWFN/3.7
 ```
 
-User also needs to agree with the licenses, as described above.
+The user also needs to agree with the licenses, as described above.
 
 ### Running Multiwfn
 
@@ -140,9 +140,9 @@ mkdir examples
 cp -r /gpfs/mariana/software/green/MultiWFN/Multiwfn_3.7_bin_Linux/examples/* examples/
 ```
 
-**NB!** The user can run Multiwfn only from his own folder, not from the shared.
+**NB!** The user can run Multiwfn only from their own folder, not from the shared one.
 
-For visualization that does not perform additional calculations, but only reads outputs (for example spectra visualization), Multiwfn can be run in interactive mode using `srun`:
+For visualization that does not perform additional calculations but only reads outputs (for example, spectra visualization), Multiwfn can be run in interactive mode using `srun`:
 
 ```sh
 srun Multiwfn job.log
@@ -154,9 +154,9 @@ or using several threads (here - 4):
 srun -n 4 Multiwfn job.log
 ```
 
-To exit interactive mode press `q` key.
+To exit interactive mode, press the `q` key.
 
-For jobs connected to electron density analysis especially in large systems it is recommended to run [multiwfn.slurm](/software/attachments/multiwfn.slurm) batch script with pre-prepared responses. Below is shown slurm script for Critical Points (CPs) search using job.wfn:
+For jobs connected to electron density analysis, especially in large systems, it is recommended to run the [multiwfn.slurm](/software/attachments/multiwfn.slurm) batch script with pre-prepared responses. Below is a slurm script for Critical Points (CPs) search using job.wfn:
 
 ```sh
 #!/bin/bash
@@ -185,36 +185,36 @@ q
 EOF
 ```
 
-Job is submitted by `sbatch` command:
+The job is submitted by the `sbatch` command:
 
 ```sh
 sbatch multiwfn.slurm
 ```
 
-### Results visualization
+### Results Visualization
 
-By default, plots made by Multiwfn will be written in the `.png` format and can be visualized by command:
+By default, plots made by Multiwfn will be written in the `.png` format and can be visualized by the command:
 
 ```sh
 display job.png
 ```
 
-Although Multiwfn has its own graphical interface, we recommend to visualize Multiwfn results in VMD (Visual Molecular Dynamics) program, corresponding scripts are provided in Multiwfn examples _(/gpfs/mariana/software/green/MultiWFN/Multiwfn_3.7_bin_Linux/examples/)_ (with `.vmd` extensions). More about visualization on **viz** can be found [here](/visualization/visualization) and about VMD - [here](/visualization/visualization-chemistry#vmd).
+Although Multiwfn has its own graphical interface, we recommend visualizing Multiwfn results in the VMD (Visual Molecular Dynamics) program. Corresponding scripts are provided in Multiwfn examples _(/gpfs/mariana/software/green/MultiWFN/Multiwfn_3.7_bin_Linux/examples/)_ (with `.vmd` extensions). More about visualization on **viz** can be found [here](/visualization/visualization) and about VMD - [here](/visualization/visualization-chemistry#vmd).
 
-On **base** VMD environment is set up by the commands:
+On **base**, the VMD environment is set up by the commands:
 
 ```sh
 module load green
 module load VMD
 ```
 
-VMD is run by command `vmd`:
+VMD is run by the command `vmd`:
 
 ```sh
 vmd job.pdb
 ```
 
-### How to cite
+### How to Cite
 
 **Citing the original paper of Multiwfn is mandatory** - DOI: [10.1002/jcc.22885](https://onlinelibrary.wiley.com/doi/abs/10.1002/jcc.22885)
 
@@ -223,7 +223,7 @@ vmd job.pdb
 - Quantitative molecular surface analysis (main function 12) - DOI: [10.1016/j.jmgm.2012.07.004](https://www.sciencedirect.com/science/article/abs/pii/S1093326312000903)
 - Hole-electron analysis (subfunction 1 of main function 18) - DOI: [10.1016/j.carbon.2020.05.023](https://www.sciencedirect.com/science/article/abs/pii/S0008622320304644)
 - Electrostatic potential evaluation algorithm - DOI: [10.1039/D1CP02805G](https://pubs.rsc.org/en/content/articlelanding/2021/cp/d1cp02805g)
-- Orbital composition analysis (main function 8). - _Tian Lu, Feiwu Chen, Calculation of Molecular Orbital Composition, Acta Chim. Sinica, 69, 2393-2406 (2011)_ (in Chinese) ([http://sioc-journal.cn/Jwk_hxxb/CN/abstract/abstract340458.shtml](http://sioc-journal.cn/Jwk_hxxb/CN/abstract/abstract340458.shtml))
+- Orbital composition analysis (main function 8) - _Tian Lu, Feiwu Chen, Calculation of Molecular Orbital Composition, Acta Chim. Sinica, 69, 2393-2406 (2011)_ (in Chinese) ([http://sioc-journal.cn/Jwk_hxxb/CN/abstract/abstract340458.shtml](http://sioc-journal.cn/Jwk_hxxb/CN/abstract/abstract340458.shtml))
 - Charge decomposition analysis (CDA) (main function 16) - _Meng Xiao, Tian Lu, Generalized Charge Decomposition Analysis (GCDA) Method, Journal of Advances in Physical Chemistry, 4, 111-124 (2015)_ (in Chinese) ([http://dx.doi.org/10.12677/JAPC.2015.44013](http://dx.doi.org/10.12677/JAPC.2015.44013))
 - Atomic dipole moment corrected Hirshfeld (ADCH) - DOI: [10.1142/S0219633612500113](https://www.worldscientific.com/doi/10.1142/S0219633612500113)
 - Population analysis module (main function 7) - DOI: [10.3866/PKU.WHXB2012281](http://www.whxb.pku.edu.cn/EN/10.3866/PKU.WHXB2012281)

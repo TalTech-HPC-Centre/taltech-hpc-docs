@@ -2,28 +2,28 @@
 
 LUMI offers a wide range of programs in different fields:
 
-- Machine learning on top of PyTorch and Tensorflow
+- Machine learning on top of PyTorch and TensorFlow
 - Image classification - ResNet
 - Object recognition and XFMR translation - SSD, XFMR
-- Scientific software suites - Gromacs (molecular dynamics), CP2K (quantum chemistry) and ICON (climate science)
+- Scientific software suites - Gromacs (molecular dynamics), CP2K (quantum chemistry), and ICON (climate science)
 - Weather prediction application - GridTools allowing measures stencil-based
 - etcetera
 
 More information about installed software and how to install software yourself can be found in the [LUMI documentation](https://docs.lumi-supercomputer.eu/software/).
 
-The list of available programs can be found in [LUMI Software Library](https://lumi-supercomputer.github.io/LUMI-EasyBuild-docs/). There can be also found license information - whether the program is free to use, requires pre-registration, or the user must provide own license.
+The list of available programs can be found in the [LUMI Software Library](https://lumi-supercomputer.github.io/LUMI-EasyBuild-docs/). There you can also find license information - whether the program is free to use, requires pre-registration, or the user must provide their own license.
 
 ## First time use
 
-To be able to use a program user has first to install it. Installation can be done by **spack** or by **EasyBuild**. The list of available programs in **EasyBuild** can be found in [LUMI Software Library](https://lumi-supercomputer.github.io/LUMI-EasyBuild-docs/) as well as installation instructions. List of programs which can be installed by **spack** can be looked by `spack list` command. The same program can be installed by both **spack** and **EasyBuild**.
+To be able to use a program, the user first has to install it. Installation can be done by **SPACK** or by **EasyBuild**. The list of available programs in **EasyBuild** can be found in the [LUMI Software Library](https://lumi-supercomputer.github.io/LUMI-EasyBuild-docs/) as well as installation instructions. The list of programs that can be installed by **SPACK** can be viewed by the `spack list` command. The same program can be installed by both **SPACK** and **EasyBuild**.
 
-There are two possible places where programs can be installed - user's `$HOME` or project directory. The latest is recommended, since other users of the project will be able to use installed programs as well. Moreover, `$HOME` size is limited by 20GB. More about [data storage at LUMI](https://docs.lumi-supercomputer.eu/storage/#where-to-store-data) and [storage billing](https://docs.lumi-supercomputer.eu/runjobs/lumi_env/billing/#storage-billing).
+There are two possible places where programs can be installed - the user's `$HOME` or project directory. The latter is recommended since other users of the project will be able to use installed programs as well. Moreover, `$HOME` size is limited to 20GB. More about [data storage at LUMI](https://docs.lumi-supercomputer.eu/storage/#where-to-store-data) and [storage billing](https://docs.lumi-supercomputer.eu/runjobs/lumi_env/billing/#storage-billing).
 
-Project `XXX` number can be found in [ETAIS](https://etais.ee) as `Effective ID`.
+The project `XXX` number can be found in [ETAIS](https://etais.ee) as `Effective ID`.
 
 ![Project Number](/access/attachments/projectN.png)
 
-It is a good practice to add the place where programs will be installed into your `.profile` or `.bashrc` file. To do this, give a command:
+It is good practice to add the place where programs will be installed into your `.profile` or `.bashrc` file. To do this, give the command:
 
 ```sh
 echo "export EBU_USER_PREFIX=/project/project_XXX" >> .bashrc
@@ -40,16 +40,16 @@ export EASYBUILD_BUILDPATH=/tmp/$USER
 
 ## Program installation
 
-### Installation by Spack
+### Installation by SPACK
 
-1. Initialize **spack**:
+1. Initialize **SPACK**:
 
     ```sh
     export SPACK_USER_PREFIX=/project/project_XXX/spack 
     module list
     ```
 
-    where project `XXX` number can be found in [ETAIS](https://etais.ee) as `Effective ID`.
+    where the project `XXX` number can be found in [ETAIS](https://etais.ee) as `Effective ID`.
 
     After, the user should load the following modules:
 
@@ -60,11 +60,11 @@ export EASYBUILD_BUILDPATH=/tmp/$USER
 
     where `YYY` is the version of LUMI, which will appear in the module list.  
     Partition `ZZZ` is determined depending on whether CPUs (partition/C) or GPUs (partition/G) will be used.  
-    `RRR` is the version of **spack**, which will appear in the module list.
+    `RRR` is the version of **SPACK**, which will appear in the module list.
 
     ![list-spack](/access/attachments/list-spack.png)
 
-2. The entire list of programs available for installation by **spack** can be viewed by the command:
+2. The entire list of programs available for installation by **SPACK** can be viewed by the command:
 
     ```sh
     spack list
@@ -78,7 +78,7 @@ export EASYBUILD_BUILDPATH=/tmp/$USER
 
     where the whole name or part of it is given.
 
-    **NB!** **spack** is insensitive to caps.
+    **NB!** **SPACK** is insensitive to caps.
 
 3. Check what flags should be added:
 
@@ -88,13 +88,13 @@ export EASYBUILD_BUILDPATH=/tmp/$USER
 
     ![spack](/access/attachments/spack.png)
 
-4. Program installation is made by the command:
+4. Program installation is done by the command:
 
     ```sh
     spack install program_name@version%compiler@version +flag(s) ^forced_dependencies
     ```
 
-    where `flag` is an installation option taken from variants of **spack** info (see above). It is recommended to try the `cce` (Cray Compiler Edition) and for MPI dependent software to force the `cray-mpich` dependency.
+    where `flag` is an installation option taken from variants of **SPACK** info (see above). It is recommended to try the `cce` (Cray Compiler Edition) and for MPI-dependent software to force the `cray-mpich` dependency.
 
     For example:
 
@@ -133,7 +133,7 @@ export EASYBUILD_BUILDPATH=/tmp/$USER
     module list
     ```
 
-    where project `XXX` number can be found in [ETAIS](https://etais.ee) as `Effective ID`.
+    where the project `XXX` number can be found in [ETAIS](https://etais.ee) as `Effective ID`.
 
     After, the user should load the following modules:
 
@@ -142,8 +142,8 @@ export EASYBUILD_BUILDPATH=/tmp/$USER
     module load EasyBuild-user
     ```
 
-    where `YYY` is the version of LUMI that can be found at the program's page in [LUMI Software Library](https://lumi-supercomputer.github.io/LUMI-EasyBuild-docs/).  
-    Sometimes partition `ZZZ` is determined in the description of the program in [LUMI Software Library](https://lumi-supercomputer.github.io/LUMI-EasyBuild-docs/). In case it is not, partition `ZZZ` is used depending on whether CPUs (partition/C) or GPUs (partition/G) will be used.
+    where `YYY` is the version of LUMI that can be found on the program's page in the [LUMI Software Library](https://lumi-supercomputer.github.io/LUMI-EasyBuild-docs/).  
+    Sometimes partition `ZZZ` is determined in the description of the program in the [LUMI Software Library](https://lumi-supercomputer.github.io/LUMI-EasyBuild-docs/). In case it is not, partition `ZZZ` is used depending on whether CPUs (partition/C) or GPUs (partition/G) will be used.
 
     ![list-EB](/access/attachments/list-eb.png)
 
@@ -153,7 +153,7 @@ export EASYBUILD_BUILDPATH=/tmp/$USER
     eb program_eb_file
     ```
 
-    **NB!** _The full name of `program_eb_file` as well as some additional flags needed for installation can be found at the program's page in [LUMI Software Library](https://lumi-supercomputer.github.io/LUMI-EasyBuild-docs/)._
+    **NB!** _The full name of `program_eb_file` as well as some additional flags needed for installation can be found on the program's page in the [LUMI Software Library](https://lumi-supercomputer.github.io/LUMI-EasyBuild-docs/)._
 
     **NB!** _Program installation will require time up to an hour._
 
@@ -163,9 +163,9 @@ export EASYBUILD_BUILDPATH=/tmp/$USER
     module load program_name
     ```
 
-## Loading program & adding modules into slurm
+## Loading program & adding modules into Slurm
 
-When the program is already installed, the user should load it before use or add it into the slurm script. If the program was installed by **spack**, the following commands should be given:
+When the program is already installed, the user should load it before use or add it into the Slurm script. If the program was installed by **SPACK**, the following commands should be given:
 
 ```sh
 export SPACK_USER_PREFIX=/project/project_XXX/spack
@@ -177,7 +177,7 @@ module load program_name/VVV
 where `XXX` is a project number, and can be found in [ETAIS](https://etais.ee) as `Effective ID`.  
 `YYY` is the version of LUMI, which will appear in the module list.  
 Partition `ZZZ` is determined depending on whether CPUs (partition/C) or GPUs (partition/G) will be used.  
-`RRR` is the version of **spack**, which will appear in the module list.  
+`RRR` is the version of **SPACK**, which will appear in the module list.  
 `VVV` is the version of the program, which will appear in the module list.
 
 If the program was installed by **EasyBuild**, the following commands should be given:
@@ -192,14 +192,14 @@ module load program_name/VVV
 where `XXX` is a project number, and can be found in [ETAIS](https://etais.ee) as `Effective ID`.  
 `YYY` is the version of LUMI, which will appear in the module list.  
 Partition `ZZZ` is determined depending on whether CPUs (partition/C) or GPUs (partition/G) will be used.  
-`RRR` is the version of **spack**, which will appear in the module list.  
+`RRR` is the version of **SPACK**, which will appear in the module list.  
 `VVV` is the version of the program, which will appear in the module list.
 
-Examples of slurm scripts can be found [here](https://docs.lumi-supercomputer.eu/runjobs/scheduled-jobs/slurm-quickstart/).
+Examples of Slurm scripts can be found [here](https://docs.lumi-supercomputer.eu/runjobs/scheduled-jobs/slurm-quickstart/).
 
 ## Uninstalling Programs
 
-To uninstall a program installed by **spack**, use the following command:
+To uninstall a program installed by **SPACK**, use the following command:
 
 ```sh
 spack uninstall program_name@version

@@ -11,13 +11,13 @@ Software on our systems is installed in the following ways:
 
 3. manually (mostly non-free software (not GPL/BSD license)) - load the `*/all` modules by command:
 
-```bash
-module load rocky8/all
-```
+    ```bash
+    module load rocky8/all
+    ```
 
 Here is a list of important software for special purpose:
 
-- CAD & Meshing software - FreeCAD, Salome, BRL-CAD, Gmsh and netgen; see [CAD-Mesh](/software/cad-mesh)
+- CAD & Meshing software - FreeCAD, Salome, BRL-CAD, Gmsh and Netgen; see [CAD-Mesh](/software/cad-mesh)
 - Finite element software for multiphysical problems - [ElmerFEM](/software/elmerfem), CalculiX, Abaqus
 - Computational Fluid Dynamics -- [OpenFOAM](/software/openfoam), SU2
 - Conformational search  - [xtb-CREST](/software/crest)
@@ -25,11 +25,11 @@ Here is a list of important software for special purpose:
 - Wavefunction analysis - [Multiwfn](/software/multiwfn)
 - Visualization software for computational chemistry, biology and physics - [Molden](/visualization/visualization-chemistry#molden), [Avogadro](/visualization/visualization-chemistry#avogadro), [JMol](/visualization/visualization-chemistry#jmol), [VMD](/visualization/visualization-chemistry#vmd), [RasMol](/visualization/visualization-chemistry#rasmol)
 - Interactive and non-interactive [Jupyter](/software/jupyter) notebooks for Julia, Python, [Octave](/software/octave)
-- Matlab-compatible computation environment - [Octave](/software/octave)
-- Data analysis - R, Matlab, [Octave](/software/octave), Julia, awk, Python, GNUplot
+- MATLAB-compatible computation environment - [Octave](/software/octave)
+- Data analysis - R, MATLAB, [Octave](/software/octave), Julia, awk, Python, GNUplot
 - Visualization software - MayaVi2, ParaView, VisIt, COVISE, OpenDX, GNUplot
 
-A more detailed description of available softwares, as well as a division by area of use, is given below.
+A more detailed description of available software, as well as a division by area of use, is given below.
 
 If software you want to use is missing in the list above, it means that it is not installed, but can be installed by your request to [hpcsupport@taltech.ee](mailto:hpcsupport@taltech.ee) or create a ticket in [Helpdesk Portal](https://helpdesk.taltech.ee/login.jsp). In the case of licensed software, the user must provide the license himself and the corresponding program will be installed.
 
@@ -269,9 +269,9 @@ The option `--user` will install the package into the user's $HOME directory (in
   - [Molden](https://www.theochem.ru.nl/molden/)
   - [Avogadro](https://avogadro.cc/)
   - [JMol](http://jmol.sourceforge.net/)
-  - [VMD](http://www.ks.uiuc.edu/Research/vmd/)(**all nodes:** spack module vmd)
+  - [VMD](http://www.ks.uiuc.edu/Research/vmd/) (**all nodes:** spack module vmd)
   - [RasMol](http://www.openrasmol.org/)
 - Software for movie animation
   - Blender
 
-The recommended way is now to use a desktop session in OnDemand, see also the [visualization](/visualization/visualization) page on how to start these and on GPU acceleration.
+The recommended way now is to use a desktop session in OnDemand, see also the [visualization](/visualization/visualization) page on how to start these and on GPU acceleration.

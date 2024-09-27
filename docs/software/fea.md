@@ -24,20 +24,20 @@ The following software is under consideration:
 
 ## ElmerFEM
 
-Elmer is a multi-physics simulation software developed by CSC. It can perform coupled mechanical, thermal, fluid, electro-magnetic simulations and can be extended by own equations.
+Elmer is a multi-physics simulation software developed by CSC. It can perform coupled mechanical, thermal, fluid, and electromagnetic simulations and can be extended by custom equations.
 
-- Elmer homepage: [http://www.elmerfem.org/blog/](http://www.elmerfem.org/blog/)
-- Elmer manuals and tutorials: [https://www.nic.funet.fi/pub/sci/physics/elmer/doc/](https://www.nic.funet.fi/pub/sci/physics/elmer/doc/)
+- [Elmer homepage](http://www.elmerfem.org/blog/)
+- [Elmer manuals and tutorials](https://www.nic.funet.fi/pub/sci/physics/elmer/doc/)
 
 ### Loading the module
 
-To use ElmerFEM the module needs to be loaded:
+To use ElmerFEM, the module needs to be loaded:
 
 ```bash
 module load elmerfem-9.0
 ```
 
-This makes the following main commands `ElmerGrid`, `ElmerSolver` available (and `ElmerGUI` can be used on viz to setup the case file). The use of ElmerGUI for simulations is **not** recommended.
+This makes the following main commands `ElmerGrid`, `ElmerSolver` available (and `ElmerGUI` can be used on viz to set up the case file). The use of ElmerGUI for simulations is **not** recommended.
 
 ### Running a tutorial case (quick-start for the impatient)
 
@@ -74,7 +74,7 @@ The following steps are needed to configure a simulation case (mostly on base):
 
 1. Create geometry in Gmsh, group and name physical volumes and surfaces (can be done on viz)
 2. Create mesh in Gmsh (large meshes can be created from the CLI in a batch job: `gmsh -3 geometry.geo`)
-3. Convert the mesh to elmer's format using ElmerGrid, including scaling if needed: `ElmerGrid 14 2 geometry.msh -scale 0.001 0.001 0.001`
+3. Convert the mesh to Elmer's format using ElmerGrid, including scaling if needed: `ElmerGrid 14 2 geometry.msh -scale 0.001 0.001 0.001`
 4. Create a new project in ElmerGUI (can be done on viz)
     - Create project
     - Load Elmer mesh (point to the created mesh directory)
@@ -109,4 +109,4 @@ Available through a SPACK module.
 module use /share/apps/HPC2/SPACK/spack/share/spack/modules/linux-centos7-skylake_avx512/
 ```
 
-deal.ii is a C++ library that can be used to write own FEA software.
+deal.ii is a C++ library that can be used to write custom FEA software.

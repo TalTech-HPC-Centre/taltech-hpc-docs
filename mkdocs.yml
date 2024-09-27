@@ -50,11 +50,12 @@ nav:
       - Data Analysis Software:
           - Jupyter: software/jupyter.md
           - Octave: software/octave.md
-      - Computational Fluid Dynamics: software/cfd.md
-      - Finite Element Analysis: software/fea.md
-      - Chapel: software/chapel.md
-      - Define: software/define.md
-      - cp2k: software/cp2k.md
+      - Other:
+          - Computational Fluid Dynamics: software/cfd.md
+          - Finite Element Analysis: software/fea.md
+          - Chapel: software/chapel.md
+          - Define: software/define.md
+          - cp2k: software/cp2k.md
 
   - Visualization:
       - visualization/visualization.md

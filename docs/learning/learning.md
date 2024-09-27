@@ -1,24 +1,24 @@
 # Courses and introductions
 
-The HPC-Centre provides an online introduction course in [moodle](https://moodle.taltech.ee/course/view.php?id=31282).
+The HPC Centre provides an online introductory course on [Moodle](https://moodle.taltech.ee/course/view.php?id=31282).
 
 The course consists of four modules:
 
 - Module 1: Linux Command Line
 - Module 2: Introduction
-- Module 3: Introduction to OpenStack/ETAIS use (in preparation)
-- Module 4: Remote visualization
+- Module 3: Introduction to OpenStack/ETAIS Use (in preparation)
+- Module 4: Remote Visualization
 
 ---
 
-## Resources on learning Linux
+## Resources for Learning Linux
 
 Linux command-line (shell, terminal):
 
-- [Linux command-line tutorial (Learning the shell)](http://linuxcommand.org/lc3_learning_the_shell.php)
-- [Linux command-line tutorial](https://tutorials.ubuntu.com/tutorial/command-line-for-beginners)
-- [Linux command-line tutorial](https://ryanstutorials.net/linuxtutorial/)
-- [Debian handbook](https://debian-handbook.info/)
+- [Linux Command-Line Tutorial (Learning the Shell)](http://linuxcommand.org/lc3_learning_the_shell.php)
+- [Linux Command-Line Tutorial](https://tutorials.ubuntu.com/tutorial/command-line-for-beginners)
+- [Linux Command-Line Tutorial](https://ryanstutorials.net/linuxtutorial/)
+- [Debian Handbook](https://debian-handbook.info/)
 - [Learn Linux the Hard Way](https://archive.is/xDb8o)
 - [The Linux Command Line](https://sourceforge.net/projects/linuxcommand/)
 
@@ -28,10 +28,10 @@ TalTech courses:
 
 ---
 
-## Resources for learning scientific computing
+## Resources for Learning Scientific Computing
 
 TalTech courses:
 
 - YFX1510 Scientific Computing (requires knowledge of C programming and Linux)
 - YFX0500 Introduction to Programming in Python
-- YMX0110 Numerical Methods and packages of mathematics
+- YMX0110 Numerical Methods and Packages of Mathematics

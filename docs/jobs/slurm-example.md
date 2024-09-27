@@ -7,7 +7,7 @@
 
 ---
 
-The following script launches a job named bowtie2 using one thread. A directory bowtie2-results will be created where results will be written into bowtie2-%J.log output file (`%J` is a job allocation number and step number in format jobid.stepid).
+The following script launches a job named `bowtie2` using one thread. A directory `bowtie2-results` will be created where results will be written into the `bowtie2-%J.log` output file (`%J` is a job allocation number and step number in the format `jobid.stepid`).
 
 ```bash
 #!/bin/bash 
@@ -31,9 +31,9 @@ bowtie2 -x lambda_virus -U $BT2_HOME/example/reads/reads_1.fq -S eg1.sam
 
 ## An OpenMP parallel job
 
-The following script launches a job named HelloOMP using OpenMP. For this job, Slurm reserves one node and 12 threads. Maximum run time is 10 minutes.
+The following script launches a job named `HelloOMP` using OpenMP. For this job, Slurm reserves one node and 12 threads. The maximum run time is 10 minutes.
 
-*Even though it is `--cpus-per-task`, Slurm reserves threads, not CPU, since "cpu" in SLURM's language is the smallest unit.*
+*Even though it is `--cpus-per-task`, Slurm reserves threads, not CPUs, since "cpu" in Slurm's language is the smallest unit.*
 
 **Note:** Each thread needs sufficient work to do to make up for the time spent in launching the thread. Therefore, it is not useful to run small/short jobs in parallel.
 
@@ -56,11 +56,11 @@ export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
 ## A script for MPI parallel job (OpenFOAM)
 
-The following script reserves 4 CPU-cores for 10 hours (since `mpirun` uses cores by default), loads the OpenMPI module, the OpenFOAM variables, changes into the case directory, and runs the typical commands necessary for a parallel OpenFOAM job. *It also sets OpenMPI transport properties to use Ethernet TCP!*
+The following script reserves 4 CPU cores for 10 hours (since `mpirun` uses cores by default), loads the OpenMPI module, the OpenFOAM variables, changes into the case directory, and runs the typical commands necessary for a parallel OpenFOAM job. *It also sets OpenMPI transport properties to use Ethernet TCP!*
 
 It would be possible to request all tasks to be on the same node using the `-N` and `--tasks-per-node` options. This would be useful to make use of the very low latency shared memory communication of MPI (provided the job fits into the RAM of a single node).
 
-*Flag `-l` in #!/bin/bash row means that settings in /home/user/.bash_profile will be executed.*
+*Flag `-l` in the `#!/bin/bash` row means that settings in `/home/user/.bash_profile` will be executed.*
 
 **Note:** Each task needs sufficient work to do to make up for the time spent with inter-process communication. Therefore, it is not useful to run small/short jobs in parallel.
 
@@ -101,7 +101,7 @@ Recommended in *this* case would be to request 8 threads `-n 8 --ntasks-per-node
 
 ## An array (parameter sweep) job
 
-This script reserves 10 threads and runs an array of jobs in the range of 13-1800. The `$SLURM_ARRAY_TASK_ID` variable calls the input files in the given range in turn and data is written in output files arrayjob, which also contain job allocation ID and job array index number (`-%A` and `-%a`, respectively).
+This script reserves 10 threads and runs an array of jobs in the range of 13-1800. The `$SLURM_ARRAY_TASK_ID` variable calls the input files in the given range in turn and data is written in output files `arrayjob`, which also contain job allocation ID and job array index number (`-%A` and `-%a`, respectively).
 
 ```bash
 #!/bin/bash 
@@ -111,15 +111,15 @@ This script reserves 10 threads and runs an array of jobs in the range of 13-180
 #SBATCH --array=13-1800                  ### Array tasks for parameter sweep
 
 ## run job
-| OK range | slightly less than linear speedup for "real", and slightly increasing "user" | | pushing hard to make a deadline |
-./myarrayjob  $SLURM_ARRAY_TASK_IDwer cores | NEVER |
+./myarrayjob $SLURM_ARRAY_TASK_ID
 ```
 
-## A GPU jobRecommended in *this* case would be to request 8 threads `-n 8 --ntasks-per-node 8` but use `mpirun -n 4`. OpenFOAM does not seem to benefit from hyperthreading
+## A GPU job
 
 The GPU scripts can be run only on **amp**.
 
-following script reserves 1 GPU (Nvidia A100), uses the GPU partition, and has a time limit of 10 minutes.<br>
+The following script reserves 1 GPU (Nvidia A100), uses the GPU partition, and has a time limit of 10 minutes.
+
 ```bash
 #!/bin/bash 
 #SBATCH --job-name=uses-gpu        ### job name
@@ -137,7 +137,7 @@ This script reserves 4 GPUs without specifying the GPU type.
 #!/bin/bash 
 #SBATCH --job-name=uses-gpu        ### job name
 #SBATCH -p gpu                     ### use gpu
-#SBATCH --gres=gpu:4               ### number of gpu
+#SBATCH --gres=gpu:4               ### number of GPUs
 #SBATCH -t 00:10:00                ### time limit 
 
 ## run job    
@@ -146,7 +146,7 @@ This script reserves 4 GPUs without specifying the GPU type.
 
 ## A job using the scratch partition (sequential or OpenMP parallel)
 
-The following script creates a directory named scratch-%x-%j (where -%x is a job name and %j is a jobid of the running job). This scratch directory is done on the scratch partition of the node to provide fast local storage, that does **not** require a network. After, the Slurm script runs the job, and copies the output files back into the permanent home-directory once the job is completed.
+The following script creates a directory named `scratch-%x-%j` (where `%x` is a job name and `%j` is a job ID of the running job). This scratch directory is done on the scratch partition of the node to provide fast local storage that does **not** require a network. After, the Slurm script runs the job and copies the output files back into the permanent home directory once the job is completed.
 
 ```bash
 #!/bin/bash -l

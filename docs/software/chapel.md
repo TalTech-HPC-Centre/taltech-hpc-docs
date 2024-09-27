@@ -3,7 +3,7 @@
 !!! warning
     This page has not been completely updated for Rocky 8 yet!
 
-Special programming language developed for supercomputing, originally by the Cray Cascade project in DARPA's High Productivity Computing Systems (HPCS) program.
+A special programming language developed for supercomputing, originally by the Cray Cascade project in DARPA's High Productivity Computing Systems (HPCS) program.
 
 ## Modules
 
@@ -44,7 +44,7 @@ source /gpfs/mariana/software/amp/chapel/chapel-1.28.0/util/quickstart/setchplen
 source /gpfs/mariana/software/green/chapel/chapel-1.28.0/util/quickstart/setchplenv.bash
 ```
 
-Check which environments are available and compare to current settings:
+Check which environments are available and compare them to current settings:
 
 ```bash
 $CHPL_HOME/util/chplenv/printchplbuilds.py
@@ -107,7 +107,7 @@ Compile:
 chpl -o jacobi-cpu-green jacobi-cpu.chpl
 ```
 
-Run the Chapel program with appropriate number of locales (typically a locale is a full node!):
+Run the Chapel program with the appropriate number of locales (typically a locale is a full node!):
 
 ```bash
 ./jacobi-cpu-green -nl 1
@@ -115,4 +115,4 @@ Run the Chapel program with appropriate number of locales (typically a locale is
 
 The program can be started directly (without `srun` or `sbatch`), it uses the specified launcher set in the environment variable `CHPL_LAUNCHER=slurm-srun`.
 
-Less threads on a node can be specified using the `CHPL_RT_NUM_THREADS_PER_LOCALE` environment variable.
+Fewer threads on a node can be specified using the `CHPL_RT_NUM_THREADS_PER_LOCALE` environment variable.

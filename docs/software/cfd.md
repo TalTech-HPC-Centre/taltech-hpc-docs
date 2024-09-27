@@ -17,14 +17,14 @@ The following software is under consideration:
 
 ### _Example use of OpenFOAM on the BASE cluster_
 
-For the example we will use one of the tutorial cases.
+For the example, we will use one of the tutorial cases.
 
 ```bash
 module load mpi/openmpi-x86_64
 source /share/apps/HPC2/OpenFOAM/OpenFOAM-v1912/etc/bashrc
 ```
 
-First time users need to create their `$WM_PROJECT_USER_DIR`:
+First-time users need to create their `$WM_PROJECT_USER_DIR`:
 
 ```bash
 mkdir $WM_PROJECT_USER_DIR --parent
@@ -96,7 +96,7 @@ sbatch openfoam.slurm
 
 #### Pre-processing (geometry and mesh generation)
 
-The geometry and mesh can be either hand-coded using **blockMesh** or with **Gmsh**, **FreeCAD** or **Salome**. When using Gmsh, be sure to save the mesh in v2 ASCII format (see separate page on [CAD-mesh](/software/cad-mesh)). This creates a volume mesh.
+The geometry and mesh can be either hand-coded using **blockMesh** or with **Gmsh**, **FreeCAD**, or **Salome**. When using Gmsh, be sure to save the mesh in v2 ASCII format (see separate page on [CAD-mesh](/software/cad-mesh)). This creates a volume mesh.
 
 To convert a Gmsh volume .msh file for OpenFOAM, use:
 
@@ -148,7 +148,7 @@ In a test run, the results have been as follows:
 
 Lesson to be learned: Parallel computation is only useful for sufficiently large jobs.
 
-**NOTE: Parallel does not (necessarily) mean faster!!!** Parallel execution introduces overhead (starting threads, communication)! For optimal execution time and optimal use of resources one needs to test and find the sweet spot.
+**NOTE: Parallel does not (necessarily) mean faster!!!** Parallel execution introduces overhead (starting threads, communication)! For optimal execution time and optimal use of resources, one needs to test and find the sweet spot.
 
 ![sweet spot](/software/attachments/of-timing.png) ![sweet spot](/software/attachments/of-timing2.png) ![sweet spot](/software/attachments/of-timing4.png)
 

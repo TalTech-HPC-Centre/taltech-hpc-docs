@@ -1,7 +1,7 @@
 # ORCA
 
-**Important note:**  
-**To run ORCA, user must register individually and have agreed to the EULA at** [Orcaforum](https://orcaforum.kofo.mpg.de/app.php/portal).
+!!! info
+    To run ORCA, users must register individually and agree to the EULA at [Orcaforum](https://orcaforum.kofo.mpg.de/app.php/portal).
 
 ---
 
@@ -18,30 +18,30 @@
     #SBATCH --cpus-per-task=1
     #SBATCH -t 1-00:00:00
     #SBATCH --partition=common
-    #SBATCH  --no-requeue
+    #SBATCH --no-requeue
 
     module load rocky8/all
     module load orca/5.0.4
     export orcadir=/gpfs/mariana/software/green/Orca/orca_5_0_4_openmpi_411/
 
-    #Create scratch directory
+    # Create scratch directory
     SCRATCH=/state/partition1/$SLURM_JOB_ID
     mkdir -p $SCRATCH
-    cp  $SLURM_SUBMIT_DIR/* $SCRATCH/
+    cp $SLURM_SUBMIT_DIR/* $SCRATCH/
     cd $SCRATCH/
 
-    #Run calculations 
+    # Run calculations 
     $orcadir/orca job.inp > $SLURM_SUBMIT_DIR/job.log
 
-    #Copy files back to working directory
+    # Copy files back to working directory
     cp $SCRATCH/* $SLURM_SUBMIT_DIR
     rm *tmp*
 
-    #Clean after yourself
-    rm -rf  $SCRATCH
+    # Clean after yourself
+    rm -rf $SCRATCH
     ```
 
-    or [orca-single-core.slurm](/software/attachments/orca-single-core.slurm) batch script for single core calculations:
+    or [orca-single-core.slurm](/software/attachments/orca-single-core.slurm) batch script for single-core calculations:
 
     ```bash
     #!/bin/bash
@@ -52,30 +52,30 @@
     #SBATCH --cpus-per-task=1
     #SBATCH -t 10:00:00
     #SBATCH --partition=common
-    #SBATCH  --no-requeue
+    #SBATCH --no-requeue
 
     module load rocky8/all
     module load orca/5.0.4
     export orcadir=/gpfs/mariana/software/green/Orca/orca_5_0_4_openmpi_411/
 
-    #Create scratch directory
+    # Create scratch directory
     SCRATCH=/state/partition1/$SLURM_JOB_ID
     mkdir -p $SCRATCH
-    cp  $SLURM_SUBMIT_DIR/* $SCRATCH/
+    cp $SLURM_SUBMIT_DIR/* $SCRATCH/
     cd $SCRATCH/
 
-    #Run calculations 
+    # Run calculations 
     $orcadir/orca job.inp > $SLURM_SUBMIT_DIR/job.log
 
-    #Copy files back to working directory
+    # Copy files back to working directory
     cp $SCRATCH/* $SLURM_SUBMIT_DIR
     rm *tmp*
 
-    #Clean after yourself
-    rm -rf  $SCRATCH
+    # Clean after yourself
+    rm -rf $SCRATCH
     ```
 
-2. Copy job-input file [job.inp](/software/attachments/job.inp) (for single core run remove core specification block).
+2. Copy job-input file [job.inp](/software/attachments/job.inp) (for single-core run remove core specification block).
 
 3. Submit the job on **base**:
 
@@ -83,8 +83,8 @@
     sbatch orca.slurm
     ```
 
-    **NB!** _More cores does not mean faster!!! See [benchmarks](/software/orca#benchmarks-for-parallel-jobs)._  
-    **NB!** To ORCA parallel run full path name is needed. Single core calculations can be performed with just `orca` command.
+    **NB!** _More cores do not mean faster!!! See [benchmarks](/software/orca#benchmarks-for-parallel-jobs)._  
+    **NB!** For ORCA parallel run, the full path name is needed. Single-core calculations can be performed with just the `orca` command.
 
 4. Check results using [visualization software](/visualization/visualization).
 
@@ -94,47 +94,47 @@
 
 ### Environment
 
-There are currently only latest ORCA 5.0.4 version is available. Environment is set up by the commands:
+Currently, only the latest ORCA 5.0.4 version is available. The environment is set up by the commands:
 
 ```bash
 module load rocky8/all
 module load orca/5.0.4
 ```
 
-The first time use, user has to agree to the licenses:
+For the first-time use, the user has to agree to the licenses:
 
 ```bash
 touch ~/.licenses/orca-accepted 
 ```
 
-if this is the first user license agreement, the following commands should be given:
+If this is the first user license agreement, the following commands should be given:
 
 ```bash
 mkdir .licenses
 touch ~/.licenses/orca-accepted  
 ```
 
-**NB!** After agreeing to the license, user has **to log out and log in again** to be able run ORCA.  
+**NB!** After agreeing to the license, the user has **to log out and log in again** to be able to run ORCA.  
 
 ### Running ORCA jobs
 
-ORCA input files are executed by the command `orca`. This command is usually placed in `slurm` script.
+ORCA input files are executed by the command `orca`. This command is usually placed in the `slurm` script.
 
-**NB!** To ORCA parallel run full path name is needed, but single core calculations can be performed with just `orca` command.
+**NB!** For ORCA parallel run, the full path name is needed, but single-core calculations can be performed with just the `orca` command.
 
 ```bash
 /gpfs/mariana/software/green/Orca/orca_5_0_4_openmpi_411/orca job.inp
 ```
 
-#### Single core calculations
+#### Single-core calculations
 
-ORCA by default execute jobs on only a single processor.  
+ORCA by default executes jobs on only a single processor.  
 Example of ORCA input:
 
 ```plaintext
 ! RI BP86 def2-SVP def2/J D4 printbasis Opt 
 
-%maxcore 2000 	#Use up to 2 GB of memory
+%maxcore 2000 	# Use up to 2 GB of memory
 
 *xyz 0 1
 C          0.67650        0.42710        0.00022
@@ -145,22 +145,22 @@ H         -1.58104        1.05112       -0.00371
 *
 ```
 
-Example of an [orca-single-core.slurm](/software/attachments/orca-single-core.slurm) batch script for single core calculations.
+Example of an [orca-single-core.slurm](/software/attachments/orca-single-core.slurm) batch script for single-core calculations.
 
-**NB!** _If in `slurm` script is defined more processors, they will be reserved, but not utilized._
+**NB!** _If in the `slurm` script more processors are defined, they will be reserved but not utilized._
 
 #### Parallel jobs
 
-To run multiple processors/cores job a number of cores should be specified both in ORCA input file and in `slurm` script. In ORCA it is done with `PAL` keyword (e.g. PAL4) or as a block input.
+To run multiple processors/cores job, a number of cores should be specified both in the ORCA input file and in the `slurm` script. In ORCA, it is done with the `PAL` keyword (e.g., PAL4) or as a block input.
 
 Example of ORCA input for 4 cores:
 
 ```plaintext
 ! RI BP86 def2-SVP def2/J D4 printbasis Opt 
 
-%maxcore 2000  	#Use up to 2 GB of memory
+%maxcore 2000  	# Use up to 2 GB of memory
 
-%pal nprocs 4 end 	#Use 4 cores
+%pal nprocs 4 end 	# Use 4 cores
 
 *xyz 0 1
 C          0.67650        0.42710        0.00022
@@ -182,34 +182,34 @@ Example of `slurm` script:
 #SBATCH --cpus-per-task=1
 #SBATCH -t 2:00:00			# Time
 #SBATCH --partition=common		# Partition
-#SBATCH  --no-requeue			# Job will not be restarted by default 
+#SBATCH --no-requeue			# Job will not be restarted by default 
 
 module load rocky8/all
 module load orca/5.0.4
 export orcadir=/gpfs/mariana/software/green/Orca/orca_5_0_4_openmpi_411/
 
-#Create scratch directory
+# Create scratch directory
 SCRATCH=/state/partition1/$SLURM_JOB_ID
 mkdir -p $SCRATCH
-cp  $SLURM_SUBMIT_DIR/* $SCRATCH/
+cp $SLURM_SUBMIT_DIR/* $SCRATCH/
 cd $SCRATCH/
 
-#Run calculations 
+# Run calculations 
 $orcadir/orca job.inp > $SLURM_SUBMIT_DIR/job.log
 
 cp $SCRATCH/* $SLURM_SUBMIT_DIR
         
-#Clean after yourself
-rm -rf  $SCRATCH
+# Clean after yourself
+rm -rf $SCRATCH
 ```
 
-**NB!** _To ORCA parallel run full path name is needed._  
+**NB!** _For ORCA parallel run, the full path name is needed._  
 
 More about ORCA input can be found at [ORCA Input Library](https://sites.google.com/site/orcainputlibrary/home), [ORCA tutorials](https://www.orcasoftware.de/tutorials_orca/) and [ORCA forum](https://orcaforum.kofo.mpg.de/).
 
 ### Memory
 
-The default dynamic memory requested by ORCA is frequently too small for successful job termination. If amount of memory requested is insufficient, the job will be killed and in `slurm-JOBID.out` will appear _"... have been killed by the cgroup **out-of-memory handler**"._
+The default dynamic memory requested by ORCA is frequently too small for successful job termination. If the amount of memory requested is insufficient, the job will be killed and in `slurm-JOBID.out` will appear _"... have been killed by the cgroup **out-of-memory handler**"._
 
 Memory usage in ORCA is controlled by the `%maxcore` keyword.
 
@@ -217,9 +217,9 @@ Memory usage in ORCA is controlled by the `%maxcore` keyword.
 %maxcore 2000
 ```
 
-There is no golden rule for memory requests, since they are basis set and calculation type dependent. Usually, 2-8 GB per 1 CPU (thread) is sufficient. If Resolution of the identity (RI) approximation is used, the memory must be increased.  
+There is no golden rule for memory requests, since they are basis set and calculation type dependent. Usually, 2-8 GB per 1 CPU (thread) is sufficient. If the Resolution of the identity (RI) approximation is used, the memory must be increased.  
 
-Data from a `slurm-JOBID.stat` file can be useful to determine the amount of memory required for a computation. In `slurm-JOBID.stat` file the efficiency of memory utilization is shown.
+Data from a `slurm-JOBID.stat` file can be useful to determine the amount of memory required for a computation. In the `slurm-JOBID.stat` file, the efficiency of memory utilization is shown.
 
 Bad example:
 
@@ -237,13 +237,13 @@ Memory Efficiency: 98.62% of 64.00 GB
 
 ### Time
 
-Time limits depend on time partition used, see [taltech user-guides](/#hardware-specification). Therefore, it is recommended to request more time than is usually needed for calculation.
+Time limits depend on the time partition used, see [taltech user-guides](/#hardware-specification). Therefore, it is recommended to request more time than is usually needed for calculation.
 
-If job was killed due to the time limit, this will be written in the end of `slurm-JOBID.out` file "error: ***JOB 317255 ON green23 CANCELLED AT 2023-08-11T22:28:01 DUE TO TIME LIMIT***"
+If the job was killed due to the time limit, this will be written at the end of the `slurm-JOBID.out` file "error: ***JOB 317255 ON green23 CANCELLED AT 2023-08-11T22:28:01 DUE TO TIME LIMIT***"
 
-In this case some files including checkpoint file `gbw` will not be copied back to the working directory. To copy files user need to run interactive session to connect to the node where calculations were done. The node number is written in both `slurm-JOBID.stat` and `slurm-JOBID.out`. In example error message it was green23.
+In this case, some files including the checkpoint file `gbw` will not be copied back to the working directory. To copy files, the user needs to run an interactive session to connect to the node where calculations were done. The node number is written in both `slurm-JOBID.stat` and `slurm-JOBID.out`. In the example error message, it was green23.
 
-Interactive session is started by the command:
+An interactive session is started by the command:
 
 ```bash
 srun -w greenXX --pty bash	# connect to green node
@@ -261,16 +261,16 @@ where `XX` - is the node number and `JOBID` - job serial number.
 
 ### Restarting a failed/interrupted calculation
 
-All ORCA jobs are restart jobs as default.
+All ORCA jobs are restart jobs by default.
 
 SCF calculations with input file name `job.inp` will automatically search for a file named `job.gbw` and will attempt to read in the old orbitals and continue the SCF from there.
 
-`MOREAD` and `%moinp` keywords allows manually specify where to read the orbitals from.
+`MOREAD` and `%moinp` keywords allow manually specifying where to read the orbitals from.
 
 ```plaintext
 ! MORead
 %moinp "job2.gbw" 
-# Note that if job2.gbw is the gbw file you read in then job2.inp can not be the name of the inputfile. 
+# Note that if job2.gbw is the gbw file you read in then job2.inp can not be the name of the input file. 
 *xyz 0 1
 ```
 
@@ -289,7 +289,7 @@ end
 
 #### Copying files
 
-During calculations ORCA creates many different additional files, by default, `slurm` copies all files to the user's directory. However, the user can choose which files to copy back to the working directory.
+During calculations, ORCA creates many different additional files. By default, `slurm` copies all files to the user's directory. However, the user can choose which files to copy back to the working directory.
 
 ```bash
 cp $SCRATCH/*.gbw  $SLURM_SUBMIT_DIR/

@@ -5,15 +5,15 @@
 
 ## Getting Started on LUMI
 
-1. Login to [minu.etais.ee](https://minu.etais.ee/login/) with MyAccessID.
+1. Log in to [minu.etais.ee](https://minu.etais.ee/login/) with MyAccessID.
 
     ![etais](/access/attachments/etais.png)
 
-2. Choose your affiliation (ttu.ee)
+2. Choose your affiliation (ttu.ee).
 
     ![MyAccessID](/access/attachments/MyAccessID1.png)
 
-3. Identify yourself with **Uni-ID (six letters taken from the user’s full name),** but for longtime employees, it could be name.surname.
+3. Identify yourself with **Uni-ID (six letters taken from the user’s full name),** but for long time employees, it could be name.surname.
 
     ![etais](/access/attachments/etais-2.png)
 
@@ -31,7 +31,7 @@
 
     ![ssh-key-1](/access/attachments/ssh-key-1.png)
 
-    Then add your SSH key into the corresponding field. In Linux and Mac, the public SSH key can be found in the `.ssh/id_rsa.pub` file. Windows by default saves the public SSH key at `C:\Users\your_username/.ssh/id_rsa.pub`. How to generate SSH keys can be found [here](/access/ssh).
+    Then add your SSH key into the corresponding field. In Linux and Mac, the public SSH key can be found in the `.ssh/id_rsa.pub` file. Windows by default saves the public SSH key at `C:\Users\your_username/.ssh/id_rsa.pub`. Instructions on how to generate SSH keys can be found [here](/access/ssh).
 
     ![ssh-key-2](/access/attachments/ssh-key-2.png)
 
@@ -42,7 +42,7 @@
 
     ***NB!*** _Just adding HPC-LUMI resources to an existing project will not work._
 
-8. After you receive an answer from the HPC Centre, login to your [minu.etais.ee](https://minu.etais.ee/) account.
+8. to After your you [minu.etais.ee](https://minu.etais.ee/) receive account. an answer from the HPC Centre, log in to your [minu.etais.ee](https://minu.etais.ee/) account.
 
 9. The corresponding project appears in your ETAIS account.
 
@@ -50,7 +50,7 @@
 
 10. In a short time, you will receive a letter from `info-noreply@csc.fi` where you will be given your username for LUMI.
 
-11. Try to connect to LUMI with the received username by the command:
+11. Try to connect to LUMI with the received username using the command:
 
     ```sh
     ssh LUMI-user-name@lumi.csc.fi

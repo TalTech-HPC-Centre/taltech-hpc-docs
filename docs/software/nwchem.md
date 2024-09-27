@@ -5,7 +5,7 @@
 
 ---
 
-## NWChem short introduction
+## NWChem Short Introduction
 
 1. Make [nwchem.slurm](/software/attachments/nwchem.slurm) batch script for parallel calculations:
 
@@ -22,19 +22,19 @@
     module load rocky8-spack
     module load nwchem
 
-    #Create scratch directory
+    # Create scratch directory
     SCRATCH=/state/partition1/$SLURM_JOB_ID
     mkdir -p $SCRATCH
     cp  $SLURM_SUBMIT_DIR/*.nw $SCRATCH/
     cd $SCRATCH/
 
-    nwchem  job.nw >> job.out
+    nwchem job.nw >> job.out
 
-    #Copy files back to working directory
+    # Copy files back to working directory
     cp $SCRATCH/* $SLURM_SUBMIT_DIR
 
-    #Clean after yourself
-    rm -rf  $SCRATCH
+    # Clean after yourself
+    rm -rf $SCRATCH
     ```
 
 2. Copy job-input file [job.nw](/software/attachments/job.nw).
@@ -49,41 +49,41 @@
 
 ---
 
-## NWChem long version
+## NWChem Long Version
 
 ---
 
-The North West computational chemistry ([NWChem](https://nwchemgit.github.io/)) is an ab initio computational chemistry software package. NWChem offers various approaches: density functional (DFT), second-order Möller–Plesset perturbation theory (MP2), single- and multi-reference (MR), ground-and excited-state and linear-response (LR) coupled-cluster (CC), multi-configuration self-consistent field (MCSCF), selected and full configuration interaction (CI). A broad range of DFT response properties, ground and excited-state molecular dynamics (MD) using either AMBER or CHARMM force fields or methods of quantum mechanics (QM), nudged elastic band (NEB) method, linear-response (LR), and real-time (RT) time-dependent density functional theory (TDDFT) are available in NWChem. Through its modular design, the ab initio methods can be coupled with the classical MD to perform mixed quantum-mechanics and molecular-mechanics simulations (QM/MM). Various solvent models and relativistic approaches are also available. Additionally, python programs may be embedded into the NWChem input and used to control the execution of NWChem. More about the possibilities of NWChem can be found in this article - [10.1063/5.0004997](https://aip.scitation.org/doi/10.1063/5.0004997).
+The North West computational chemistry ([NWChem](https://nwchemgit.github.io/)) is an ab initio computational chemistry software package. NWChem offers various approaches: density functional (DFT), second-order Möller–Plesset perturbation theory (MP2), single- and multi-reference (MR), ground-and excited-state and linear-response (LR) coupled-cluster (CC), multi-configuration self-consistent field (MCSCF), selected and full configuration interaction (CI). A broad range of DFT response properties, ground and excited-state molecular dynamics (MD) using either AMBER or CHARMM force fields or methods of quantum mechanics (QM), nudged elastic band (NEB) method, linear-response (LR), and real-time (RT) time-dependent density functional theory (TDDFT) are available in NWChem. Through its modular design, the ab initio methods can be coupled with classical MD to perform mixed quantum-mechanics and molecular-mechanics simulations (QM/MM). Various solvent models and relativistic approaches are also available. Additionally, Python programs may be embedded into the NWChem input and used to control the execution of NWChem. More about the possibilities of NWChem can be found in this article - [10.1063/5.0004997](https://aip.scitation.org/doi/10.1063/5.0004997).
 
 Some useful links:
 
-- the tutorials site at FAccTs - [https://nwchemgit.github.io/Home.html](https://nwchemgit.github.io/Home.html)
-- DOI:[10.1016/j.cpc.2010.04.018](https://www.sciencedirect.com/science/article/abs/pii/S0010465510001438?via%3Dihub)
+- [The tutorials site at FAccTs](https://nwchemgit.github.io/Home.html)
+- DOI: [10.1016/j.cpc.2010.04.018](https://www.sciencedirect.com/science/article/abs/pii/S0010465510001438?via%3Dihub)
 
 ### Environment
 
-At HPC is installed 7.0.2 version of NWChem. To start working with NWChem an environment needed to be set up with the commands:
+At HPC, the 7.0.2 version of NWChem is installed. To start working with NWChem, an environment needs to be set up with the commands:
 
 ```bash
 module load rocky8-spack
 module load nwchem
 ```
 
-### Input file
+### Input File
 
-NWChem input file consists from certain blocks: geometry, SCF, DFT, MP2, etc. NWChem also allows to combine several jobs into one input file. Below is given example of NWChem input file (job.nw) where: 
+NWChem input files consist of certain blocks: geometry, SCF, DFT, MP2, etc. NWChem also allows combining several jobs into one input file. Below is an example of an NWChem input file (job.nw) where:
 
-1. water dimer will be firstly optimized at BP86-D3BJ/def2-SVP level of theory
-2. frequency calculations will be done at the same level of theory
-3. single point energy will be calculated using larger basis set (def2-TZVPP) and B3LYP functional.
+1. The water dimer will be firstly optimized at BP86-D3BJ/def2-SVP level of theory.
+2. Frequency calculations will be done at the same level of theory.
+3. Single point energy will be calculated using a larger basis set (def2-TZVPP) and B3LYP functional.
 
-Additionally in example input file are shown implementation of some useful keywords as `print` and `linopt`.
+Additionally, in the example input file, the implementation of some useful keywords such as `print` and `linopt` is shown.
 
 ```bash
 start water            # all intermediate files will have this name
 title "Water dimer"    # title of job
 
-echo                   # input file will be printed in the beginning of the output file
+echo                   # input file will be printed at the beginning of the output file
 
 memory total 3000 mb
 
@@ -138,24 +138,24 @@ end
 task dft energy
 ```
 
-NWChem is well suited for large system calculations or molecular dynamics simulations with subsequent calculation of system properties. Example of an input ([job_MD.nw](/software/attachments/job_MD.nw)) for MD simulation with subsequent calculation of dipole moment every 10 steps.
+NWChem is well suited for large system calculations or molecular dynamics simulations with subsequent calculation of system properties. An example of an input ([job_MD.nw](/software/attachments/job_MD.nw)) for MD simulation with subsequent calculation of dipole moment every 10 steps.
 
-More about NWChem input can be found at [NWChem manual](https://nwchemgit.github.io/Home.html).
+More about NWChem input can be found in the [NWChem manual](https://nwchemgit.github.io/Home.html).
 
-### Running NWChem jobs
+### Running NWChem Jobs
 
-NWChem input files are executed by the command `nwchem`. This command is usually placed in slurm script.
+NWChem input files are executed by the command `nwchem`. This command is usually placed in a slurm script.
 
-### Single core & parallel calculations
+### Single Core & Parallel Calculations
 
-NWChem jobs can be calculated on one thread, in parallel on one node or using several nodes at once. Depending on the size of job, the corresponding parameters must be modified in slurm file:
+NWChem jobs can be calculated on one thread, in parallel on one node, or using several nodes at once. Depending on the size of the job, the corresponding parameters must be modified in the slurm file:
 
 ```bash
 #SBATCH --ntasks=6
 #SBATCH --nodes=1
 ```
 
-Below is given an example of `slurm` script for NWChem parallel run on 1 node and 6 threads with allocated memory of 3 GB:
+Below is an example of a `slurm` script for an NWChem parallel run on 1 node and 6 threads with allocated memory of 3 GB:
 
 ```bash
 #!/bin/bash
@@ -170,22 +170,22 @@ Below is given an example of `slurm` script for NWChem parallel run on 1 node an
 module load rocky8-spack
 module load nwchem
 
-#Create scratch directory
+# Create scratch directory
 SCRATCH=/state/partition1/$SLURM_JOB_ID
 mkdir -p $SCRATCH
 cp  $SLURM_SUBMIT_DIR/*.nw $SCRATCH/
 cd $SCRATCH/
 
-nwchem  job.nw > job.out
+nwchem job.nw > job.out
 
-#Copy files back to working directory
+# Copy files back to working directory
 cp $SCRATCH/* $SLURM_SUBMIT_DIR
 
-#Clean after yourself
-rm -rf  $SCRATCH
+# Clean after yourself
+rm -rf $SCRATCH
 ```
 
-**NB!** _In example of `slurm` script calculations will be done on a single node, thus partition is `common`. If several nodes will be used then partition should be `green-ib`._
+**NB!** _In the example of the `slurm` script, calculations will be done on a single node, thus the partition is `common`. If several nodes will be used, then the partition should be `green-ib`._
 
 ```bash
 #SBATCH --nodes=2
@@ -193,11 +193,11 @@ rm -rf  $SCRATCH
 #SBATCH --partition=green-ib
 ```
 
-**NB!** _To be able to restart calculations, they must be done in the `$HOME` catalog, and not in `$SCRATCH` directory._
+**NB!** _To be able to restart calculations, they must be done in the `$HOME` catalog, and not in the `$SCRATCH` directory._
 
-### Restarting a failed/interrupted calculation
+### Restarting a Failed/Interrupted Calculation
 
-NWChem does not give message about normal termination. If calculation terminated normally, output will have this end:
+NWChem does not give a message about normal termination. If the calculation terminated normally, the output will have this end:
 
 ```
                                   AUTHORS
@@ -225,21 +225,21 @@ T. Van Voorhis, A. A. Auer, M. Nooijen, L. D. Crosby, E. Brown, G. Cisneros,
 Total times  cpu:       56.9s     wall:       57.2s
 ```
 
-If job was not terminated normally, it can be restarted. However, to do this, calculations must be done in the `$HOME` catalog, and not in `$SCRATCH` directory.
+If the job was not terminated normally, it can be restarted. However, to do this, calculations must be done in the `$HOME` catalog, and not in the `$SCRATCH` directory.
 
-To restart calculation just change `start` command to `restart` in initial input file and run slurm script again.
+To restart the calculation, just change the `start` command to `restart` in the initial input file and run the slurm script again.
 
-**NB!** _We recommend to change the restart output file name so it was possible to compare progress in the end of calculations._
+**NB!** _We recommend changing the restart output file name so it is possible to compare progress at the end of calculations._
 
 ### Memory
 
-At the beginning of the NWChem input file the amount of memory requested for the entire job must be specified. If amount of memory requested is insufficient, the job can crash. Memory usage in NWChem is controlled by the `memory total` keywords.
+At the beginning of the NWChem input file, the amount of memory requested for the entire job must be specified. If the amount of memory requested is insufficient, the job can crash. Memory usage in NWChem is controlled by the `memory total` keywords.
 
 ```bash
 memory total 3000 mb
 ```
 
-There is no golden rule for memory requests, since they are basis set and calculation type dependent. Usually, 1-5 GB per 1 CPU is sufficient. Data from a `slurm-JOBID.stat` file can be useful to determine the amount of memory required for a computation. In `slurm-JOBID.stat` file the efficiency of memory utilization is shown.
+There is no golden rule for memory requests, since they are basis set and calculation type dependent. Usually, 1-5 GB per 1 CPU is sufficient. Data from a `slurm-JOBID.stat` file can be useful to determine the amount of memory required for a computation. In the `slurm-JOBID.stat` file, the efficiency of memory utilization is shown.
 
 Bad example:
 
@@ -257,10 +257,10 @@ Memory Efficiency: 98.62% of 64.00 GB
 
 ### Time
 
-Time limits depend on time partition used, see [taltech user-guides](/#hardware-specification). If the calculation time exceeds the time limit requested in the `slurm` script, then the job will be killed. Therefore, it is recommended to request more time than is usually needed for calculation.
+Time limits depend on the time partition used, see [taltech user-guides](/#hardware-specification). If the calculation time exceeds the time limit requested in the `slurm` script, then the job will be killed. Therefore, it is recommended to request more time than is usually needed for the calculation.
 
-### How to cite
+### How to Cite
 
-Please cite DOI:[10.1063/5.0004997](https://aip.scitation.org/doi/10.1063/5.0004997) when publishing results obtained with NWChem:
+Please cite DOI: [10.1063/5.0004997](https://aip.scitation.org/doi/10.1063/5.0004997) when publishing results obtained with NWChem.
 
-And also look at the [NWChem manual](https://nwchemgit.github.io/Home.html) on the relevant topic, more detailed information on citing will be given there.
+Also, look at the [NWChem manual](https://nwchemgit.github.io/Home.html) on the relevant topic; more detailed information on citing will be given there.

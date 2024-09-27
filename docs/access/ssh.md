@@ -5,13 +5,13 @@
 
 ## Generating SSH keys
 
-In Linux and macOS SSH keys can be generated in the terminal with the command:
+In Linux and macOS, SSH keys can be generated in the terminal with the command:
 
 ```sh
 ssh-keygen -t rsa
 ```
 
-In Windows SSH keys can be generated in PowerShell with the command:
+In Windows, SSH keys can be generated in PowerShell with the command:
 
 ```sh
 ssh-keygen.exe -t rsa
@@ -25,9 +25,9 @@ The program prompts the user through the process, setting the location and askin
 
 More detailed guides can be found here:
 
-- Linux - [https://linuxhint.com/generate-ssh-keys-on-linux/](https://linuxhint.com/generate-ssh-keys-on-linux/)
-- macOS - [https://docs.tritondatacenter.com/public-cloud/getting-started/ssh-keys/generating-an-ssh-key-manually/manually-generating-your-ssh-key-in-mac-os-x](https://docs.tritondatacenter.com/public-cloud/getting-started/ssh-keys/generating-an-ssh-key-manually/manually-generating-your-ssh-key-in-mac-os-x)
-- Windows - [https://phoenixnap.com/kb/generate-ssh-key-windows-10](https://phoenixnap.com/kb/generate-ssh-key-windows-10)
+- Linux - [Generate SSH Keys on Linux](https://linuxhint.com/generate-ssh-keys-on-linux/)
+- macOS - [Manually Generating Your SSH Key in Mac OS X](https://docs.tritondatacenter.com/public-cloud/getting-started/ssh-keys/generating-an-ssh-key-manually/manually-generating-your-ssh-key-in-mac-os-x)
+- Windows - [Generate SSH Key on Windows 10](https://phoenixnap.com/kb/generate-ssh-key-windows-10)
 
 ---
 
@@ -48,7 +48,7 @@ ssh-copy-id Uni-ID@base.hpc.taltech.ee
 On Windows, it can be copied in PowerShell with this command:
 
 ```sh
-type $env:USERPROFILE\.ssh\id_rsa.pub | ssh Uni-Id@base.hpc.taltech.ee "cat >> .ssh/authorized_keys"
+type $env:USERPROFILE\.ssh\id_rsa.pub | ssh Uni-ID@base.hpc.taltech.ee "cat >> .ssh/authorized_keys"
 ```
 
 A more thorough explanation with an example can be found [here](https://www.chrisjhart.com/Windows-10-ssh-copy-id/).

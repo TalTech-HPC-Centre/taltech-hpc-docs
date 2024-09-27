@@ -5,7 +5,7 @@
 
 ---
 
-A statistics file is created after finishing a job which shows hardware and job related info to the user. Statistics files are separated by the ID of the job and the filename is generated as such using the SLURM environment variable allocated to the job as the ID: `slurm-$SLURM_JOB_ID.stat`. The `.stat` file created in the user’s current working directory where the job is run.
+A statistics file is created after finishing a job, which shows hardware and job-related info to the user. Statistics files are separated by the ID of the job, and the filename is generated using the SLURM environment variable allocated to the job as the ID: `slurm-$SLURM_JOB_ID.stat`. The `.stat` file is created in the user’s current working directory where the job is run.
 
 The statistics file contains:
 
@@ -19,10 +19,10 @@ The statistics file contains:
 - Memory Utilized (Total amount of memory utilized in kilobytes)
 - Memory Efficiency (Percentage of total memory allocated)
 - MaxDiskWrite (Displays disk usage)
-- Command (Displays the command that was run for this job, makes it easier for users to identify where an error might have occurred). This info may be used to better allocate resources depending on the job or modify the job scripts so that they use the allocated resources more efficiently.
+- Command (Displays the command that was run for this job, making it easier for users to identify where an error might have occurred). This info may be used to better allocate resources depending on the job or modify the job scripts so that they use the allocated resources more efficiently.
 
 Disabling this feature:
-Create the file `.no_slurm_stat` by running the command
+Create the file `.no_slurm_stat` by running the command:
 `touch ~/.no_slurm_stat`.
 
-To re-enable this feature simply remove the `.no_slurm_stat` by running the following command: `rm ~/.no_slurm_stat`
+To re-enable this feature, simply remove the `.no_slurm_stat` by running the following command: `rm ~/.no_slurm_stat`

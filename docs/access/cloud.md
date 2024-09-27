@@ -2,18 +2,18 @@
 
 ## Access to HPC Cloud (short introduction)
 
-In order to gain access to HPC Centre Cloud, you should take the following steps:
+To gain access to the HPC Centre Cloud, follow these steps:
 
-1. Login to ETAIS <https://minu.etais.ee> and authenticate with your TalTech UniID credentials via MyAccessID.
-2. Upload your SSH Public Key to ETAIS Portal.
-3. Contact us by email ([hpcsupport@taltech.ee](mailto:hpcsupport@taltech.ee)), in Teams (HPC Support Chat) or through [Helpdesk](https://taltech.atlassian.net/servicedesk/customer/portal/18) to be added to a Project.
-4. Get familiar with ETAIS documentation [here](https://etais.ee/using/).
+1. Log in to ETAIS <https://minu.etais.ee> and authenticate with your TalTech UniID credentials via MyAccessID.
+2. Upload your SSH Public Key to the ETAIS Portal.
+3. Contact us by email ([hpcsupport@taltech.ee](mailto:hpcsupport@taltech.ee)), in Teams (HPC Support Chat), or through [Helpdesk](https://taltech.atlassian.net/servicedesk/customer/portal/18) to be added to a project.
+4. Get familiar with the ETAIS documentation [here](https://etais.ee/using/).
 
 ## Access to HPC Cloud (long version)
 
-HPC Centre runs OpenStack-based Cloud. In order to gain access to it, you should take the following steps:
+The HPC Centre runs an OpenStack-based Cloud. To gain access to it, follow these steps:
 
-### Login to [ETAIS](https://minu.etais.ee) and authenticate with your TalTech UniID credentials via MyAccessID
+### Log in to [ETAIS](https://minu.etais.ee) and authenticate with your TalTech UniID credentials via MyAccessID
 
 Go to ETAIS <https://minu.etais.ee> and choose "sign in with MyAccessID":
 
@@ -23,7 +23,7 @@ Choose **ttu.ee** as your affiliation:
 
 ![etais-login-2 alt ><](/access/attachments/MyAccessID1.png)
 
-Login using **Uni-ID (six letters taken from the user’s full name),** but for longtime employees it could be name.surname:
+Log in using **Uni-ID (six letters taken from the user’s full name),** but for long time employees, it could be name.surname:
 
 ![etais-login-3 alt ><](/access/attachments/etais-2.png)
 
@@ -31,11 +31,11 @@ Confirm your data and press the button to continue:
 
 ![etais](/access/attachments/etais-3-1.png)
 
-Fill in the required fields, agree with the terms of use and press the submit button:
+Fill in the required fields, agree to the terms of use, and press the submit button:
 
 ![etais](/access/attachments/MyAccessID-1.png)
 
-### Upload your SSH Public Key to ETAIS Portal
+### Upload your SSH Public Key to the ETAIS Portal
 
 Go to the SSH page:
 
@@ -47,13 +47,13 @@ Add your public key (`id_rsa.pub`) to the corresponding field:
 
 How to get SSH keys can be read [here](/access/ssh).
 
-### Contact us to be added to a Project
+### Contact us to be added to a project
 
 There are three ways to contact us:
 
 - Email ([hpcsupport@taltech.ee](mailto:hpcsupport@taltech.ee))
 - Teams (HPC Support Chat)
-- or [Helpdesk](https://taltech.atlassian.net/servicedesk/customer/portal/18)
+- [Helpdesk](https://taltech.atlassian.net/servicedesk/customer/portal/18)
 
 ### Learn how to use the cloud
 

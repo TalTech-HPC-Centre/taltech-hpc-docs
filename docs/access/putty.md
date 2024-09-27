@@ -12,10 +12,10 @@ For TalTech Windows machines PuTTY client should be download from [Microsoft App
 
 1. Open Putty
 
-2. Write host name, name of a session and save it.
+2. Write the host name, the name of a session and save it.
 
     ![Putty1](/access/attachments/putty-1.png)
 
-3. To enable run of graphical applications, go to SSH and enable X11 forwarding.
+3. To enable running of graphical applications, go to SSH and enable X11 forwarding.
 
     ![Putty2](/access/attachments/putty-2.png)
