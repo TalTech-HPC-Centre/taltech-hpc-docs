@@ -121,7 +121,7 @@ Download sftp capable file transfer software.
 
 For example, [WinSCP](https://winscp.net/eng/index.php) (Windows) or [FileZilla Client](https://filezilla-project.org/) (any platform).
 
-Install the sftp client, connect to base.hpc.taltech.ee, make your work directory, and copy the [jupyterlab.slurm](/software/attachments/jupyterlab.slurm) file. More details about using WinSCP and FileZilla Client can be found [here](/access/cluster).
+Install the sftp client, connect to base.hpc.taltech.ee, make your work directory, and copy the [jupyterlab.slurm](/software/attachments/jupyterlab.slurm.txt) file. More details about using WinSCP and FileZilla Client can be found [here](/access/cluster).
 
 ### Starting JupyterLab as a Batch Job in HPC
 

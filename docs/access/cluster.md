@@ -60,7 +60,7 @@ ED25519 SHA256:9zRBmS3dxD7BNISZKwg6l/2+6p4HeqlOhA4OMBjD9mk
 RSA SHA256:Q6NDm88foRVTKtEAEexcRqPqMQNGUzf3rQdetBympPg
 ```
 
-[How to get SSH keys](/ssh).
+[How to get SSH keys](/access/ssh).
 
 ---
 

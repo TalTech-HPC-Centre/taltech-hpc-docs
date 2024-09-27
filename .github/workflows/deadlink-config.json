@@ -25,7 +25,10 @@
         "pattern": "^https://ondemand.hpc.taltech.ee"
     },
     {
-        "pattern": "^https://sylabs.io/"
+        "pattern": "^https://sylabs.io"
+    },
+    {
+        "pattern": "^https://www.tensorflow.org"
     }
   ],
     "timeout": "20s",

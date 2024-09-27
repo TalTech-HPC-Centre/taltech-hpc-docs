@@ -82,7 +82,7 @@ If you use Gmsh, please cite [C. Geuzaine and J.-F. Remacle. Gmsh: a three-dimen
 
 ## Netgen (NGsolve)
 
-[Netgen](https://ngsolve.org/) is a part of the NGsolve suite. Netgen is an automatic 3D tetrahedral mesh generator containing modules for mesh optimization and hierarchical mesh refinement. It accepts input from constructive solid geometry `.csg` or boundary representation (BRep) from `.stl` files, but also handles `.brep`, `.step`, and `.iges` formats. Those meshes generated can be exported in several formats (e.g., neutral, Abaqus, Fluent, [ElmerFEM](/software/attachments/software/elmerfem), Gmsh, and [OpenFOAM](/software/attachments/software/openfoam)). Netgen has a GUI (e.g., use an [X2GO](/software/attachments/visualization/x2go) session on **viz**), but can also be used through its Python interface.
+[Netgen](https://ngsolve.org/) is a part of the NGsolve suite. Netgen is an automatic 3D tetrahedral mesh generator containing modules for mesh optimization and hierarchical mesh refinement. It accepts input from constructive solid geometry `.csg` or boundary representation (BRep) from `.stl` files, but also handles `.brep`, `.step`, and `.iges` formats. Those meshes generated can be exported in several formats (e.g., neutral, Abaqus, Fluent, [ElmerFEM](/software/elmerfem), Gmsh, and [OpenFOAM](/software/openfoam)). Netgen has a GUI (e.g., use an [X2GO](/visualization/x2go) session on **viz**), but can also be used through its Python interface.
 
 A Python example using the OpenCASCADE kernel:
 
