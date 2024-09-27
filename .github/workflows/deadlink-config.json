@@ -2,12 +2,16 @@
     "projectBaseUrl":"${workspaceFolder}",
     "replacementPatterns": [
         {
-            "pattern": "^/",
-            "replacement": "{{BASEURL}}/"
+            "pattern": "^(/[^.]+)(#.*)$",
+            "replacement": "$1.md$2"
         },
         {
-            "pattern": "/github/workspace/",
-            "replacement": "/github/workspace/docs/"
+            "pattern": "^(/[^.]+)$",
+            "replacement": "$1.md"
+        },
+        {
+            "pattern": "^/",
+            "replacement": "{{BASEURL}}/docs/"
         }
     ],
     "timeout": "20s",
