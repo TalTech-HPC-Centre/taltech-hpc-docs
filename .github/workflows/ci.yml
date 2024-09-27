@@ -1,4 +1,4 @@
-name: ci
+name: Build, Optimize, Deploy
 on:
   push:
     branches:
@@ -9,8 +9,29 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
       - uses: actions/setup-python@v4
         with:
           python-version: 3.x
-      - run: pip install -r requirements.txt
-      - run: mkdocs gh-deploy --force
+
+      - name: Install Jampack for optimization
+        run: |
+          npm install -g @divriots/jampack --unsafe-perm
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build
+        run: mkdocs build
+
+      - name: Optimize with Jampack
+        run: npx @divriots/jampack site
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: site
+          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
