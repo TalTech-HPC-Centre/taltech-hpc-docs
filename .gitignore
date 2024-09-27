@@ -1,0 +1,7 @@
+site/
+.vscode
+.cache/
+public
+*.Identifier
+*.bak
+node_modules/

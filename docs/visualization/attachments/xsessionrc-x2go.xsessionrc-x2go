@@ -1,0 +1,7 @@
+#fvwm-root /usr/share/fvwm/default-config/images/background/bg1.png
+#xloadimage --onroot /usr/share/fvwm/default-config/images/background/bg1.png
+#xosview +cpus +net -bat -page -ints -geometry 175x775-12-36&
+xterm -geometry 80x24+0+264 -ls &
+xterm -geometry 80x24+0+616 -ls &
+#fvwm2
+

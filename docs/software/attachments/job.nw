@@ -1,0 +1,55 @@
+start water            # all intermediate files will have this name
+title "Water dimer"    # title of job
+
+echo                   # input file will be printed in the beginning of output file
+
+memory total 3000 mb
+
+geometry units angstrom
+ O    -0.093470    -1.154274     0.290542
+ H     0.329461    -0.566865    -0.340362
+ H    -0.864449    -1.335840    -0.238173
+ O    -0.135461     1.136660    -0.233474
+ H     0.636237     1.304331     0.298468
+ H    -0.563123     0.545569     0.390712
+end
+
+basis
+ * library Def2-SVP     # basis set
+end
+
+scf
+ rhf                    # restricted Hartree-Fock
+ singlet                # multiplicity
+ maxiter 100            # maximum number of SCF iterations 
+ print low              # will minimize output
+end
+
+dft
+ mult 1                 # multiplicity
+ xc becke88 perdew86    # functional BP86
+ disp vdw 4             # dispersion correction D3BJ
+ print low              # will minimize output
+end
+
+driver
+ maxiter 100            # maximum number of iterations during optimization
+ linopt 0               # speed up calculations 
+end
+
+task dft optimize
+task dft freq numerical
+
+basis
+ * library Def2-TZVPP
+end
+
+dft
+ mult 1                 # multiplicity
+ xc b3lyp               # functional B3LYP
+ disp vdw 4             # dispersion correction D3BJ
+ print low              # will minimize output
+end
+
+task dft energy
+

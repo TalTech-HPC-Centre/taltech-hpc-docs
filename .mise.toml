@@ -1,0 +1,27 @@
+[tools]
+python = "3.10.12"
+
+[tasks.default]
+description = 'Install deps and test'
+depends = ['install','build','test']
+
+[tasks.install]
+description = 'Install MkDocs deps'
+depends = ['install-pip']
+run = "pip install -r requirements.txt"
+alias = 'i'
+
+[tasks.build]
+description = 'Build MkDocs'
+run = "mkdocs build"
+alias = 'b'
+
+[tasks.test]
+description = 'Build and Serve MkDocs'
+run = "mkdocs serve"
+alias = 't'
+
+[tasks.clean]
+description = 'Clean built site directory'
+run = "rm -rf site"
+alias = 'c'
