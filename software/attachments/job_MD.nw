@@ -1,0 +1,43 @@
+start water              # all intermediate files will have this name
+title "Water claster"    # title of job
+
+echo                     # input file will be printed in the beginning of output file
+
+memory total 3000 mb
+
+geometry units angstrom
+ O    -0.093470    -1.154274     0.290542
+ H     0.329461    -0.566865    -0.340362
+ H    -0.864449    -1.335840    -0.238173
+ O    -0.135461     1.136660    -0.233474
+ H     0.636237     1.304331     0.298468
+ H    -0.563123     0.545569     0.390712
+end
+
+basis
+ * library 6-31G*       # basis set
+end
+
+dft
+ mult 1                 # multiplicity
+ xc pbe0                # functional BP86
+ disp vdw 3             # dispersion correction D3
+end
+
+qmd
+    Nstep_nucl 100      #  will be calculated 100 steps
+    dt_nucl    10.0     # nuclear time step in atomic units
+    com_step    10      # how often center-of-mass translations and rotations are removed
+    thermostat  none    # thermostat for controlling temperature of the simulation
+    print_xyz   10      # xyz coordinates will be printed into xyz file every 10 steps
+    property 10         # property will be calculated every 10 steps
+end
+
+property
+  dipole
+end
+
+task dft qmd
+
+
+
