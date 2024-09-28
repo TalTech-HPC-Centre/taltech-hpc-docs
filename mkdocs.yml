@@ -124,6 +124,7 @@ theme:
 plugins:
   - search
   - glightbox
+  - abs-to-rel
 #  - exporter
 #  - exporter-pdf
 #  - exporter-extras:
