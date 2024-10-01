@@ -4,7 +4,7 @@
 
 To gain access to the HPC Centre Cloud, follow these steps:
 
-1. Log in to ETAIS <https://minu.etais.ee> and authenticate with your TalTech UniID credentials via MyAccessID.
+1. Log in to [ETAIS](https://minu.etais.ee) and authenticate with your TalTech UniID credentials via MyAccessID.
 2. Upload your SSH Public Key to the ETAIS Portal.
 3. Contact us by email ([hpcsupport@taltech.ee](mailto:hpcsupport@taltech.ee)), in Teams (HPC Support Chat), or through [Helpdesk](https://taltech.atlassian.net/servicedesk/customer/portal/18) to be added to a project.
 4. Get familiar with the ETAIS documentation [here](https://etais.ee/using/).
@@ -15,7 +15,7 @@ The HPC Centre runs an OpenStack-based Cloud. To gain access to it, follow these
 
 ### Log in to [ETAIS](https://minu.etais.ee) and authenticate with your TalTech UniID credentials via MyAccessID
 
-Go to ETAIS <https://minu.etais.ee> and choose "sign in with MyAccessID":
+Go to ETAIS [ETAIS](https://minu.etais.ee) and choose "sign in with MyAccessID":
 
 ![etais](/access/attachments/etais.png)
 

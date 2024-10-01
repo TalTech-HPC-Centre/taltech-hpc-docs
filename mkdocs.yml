@@ -87,15 +87,14 @@ theme:
   icon:
     repo: fontawesome/brands/github
   features:
-    - header.autohide
-    #- navigation.expand
+    #- header.autohide
     - navigation.tabs
-    - navigation.sections
+    #- navigation.expand # navigation.sections
     - navigation.indexes
     - navigation.top
-    - navigation.tabs.sticky
     - content.tabs.link
     - search.share
+    - search.suggest
     - content.code.annotate
     - content.code.copy
     - content.action.view
