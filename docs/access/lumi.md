@@ -13,15 +13,15 @@ LUMI is the fastest supercomputer in Europe. It's an HPE Cray EX supercomputer c
 
 More about LUMI system architecture can be found in the [overview](https://docs.lumi-supercomputer.eu/hardware/) and [LUMI’s full system architecture](https://www.lumi-supercomputer.eu/lumis-full-system-architecture-revealed/).
 
-LUMI uses Slurm as a job scheduler and resource manager. Slurm partitions can be allocated by node or by resources. More about partitions can be found [here](https://docs.lumi-supercomputer.eu/runjobs/scheduled-jobs/partitions/).
+LUMI uses Slurm as a job scheduler and resource manager just as the TalTech HPC centre. Slurm partitions can be allocated by node or by resources. More about partitions can be found [here](https://docs.lumi-supercomputer.eu/runjobs/scheduled-jobs/partitions/).
 
 ## Why LUMI?
 
 There are several reasons to choose LUMI instead of HPC:
 
-- If the job is run using GPUs.
-- If the job needs large memory.
-- If the queue on HPC is too long.
+- If the job is run using GPUs (note that LUMI uses AMD GPUs).
+- If the job needs a lot of memory and TalTech HPC machines with large memory are queued up.
+- If the queue on TalTech HPC is too long.
 
 ## Getting started
 

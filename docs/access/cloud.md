@@ -1,4 +1,6 @@
-# Quickstart: Cloud
+# TalTech HPC Cloud
+
+With access to the TalTech HPC Cloud, you can create and manage virtual machines tailored to your research or project needs. The cloud environment allows you to request virtual machines for computing resources, where you can install necessary software, and run simulations or analyses.
 
 ## Access to HPC Cloud (short introduction)
 

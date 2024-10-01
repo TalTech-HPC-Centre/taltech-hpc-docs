@@ -1,4 +1,6 @@
-# Quickstart: Cluster
+# TalTech HPC Cluster
+
+Using the queueing system, it is possible to run programs and scripts to utilize cluster resources such as CPU, RAM, and GPU. This allows for efficient execution of computational tasks by distributing your workloads across the cluster's multiple nodes.
 
 ## Accessing the cluster
 

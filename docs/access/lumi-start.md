@@ -1,4 +1,4 @@
-# LUMI Quick Start
+# LUMI Supercomputer
 
 !!! info
     ***If you face any problems during registration to LUMI, let us know by email at [hpcsupport@taltech.ee](mailto:hpcsupport@taltech.ee) or in Teams in the "HPC Support Chat".***

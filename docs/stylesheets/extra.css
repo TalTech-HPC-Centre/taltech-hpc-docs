@@ -1,25 +1,32 @@
 :root {
-  --md-admonition-icon--base-info: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m16.75 22.16-2.75-3L15.16 18l1.59 1.59L20.34 16l1.16 1.41-4.75 4#ff708d22a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2h1v7l2.5-1.5L12 9V2h6a2 2 0 0 1 2 2v9.34A6.005 6.005 0 0 0 12.8 22H6Z"/></svg>')
+  --md-primary-fg-color:        #4dbed2;
+  --md-primary-fg-color--light: #4dbed2;
+  --md-primary-fg-color--dark:  #4dbed2;
+  --idk0: #584b98;
+  --idk: #394878;
+  --idk2: #505ca1;
+  --idk3: #656cc8;
+}
+.md-header {
+  background: linear-gradient(90deg, #4dbed2 0%, #342b60 100%);
 }
 
-:root > * {
-  --md-primary-fg-color:        #4b62a9;
+.md-tabs {
+  background: linear-gradient(90deg, #4dbed2 0%, #342b60 100%);
 }
 
-
-.md-typeset .admonition.base-info,
-.md-typeset details.base-info {
-  border-color: rgb(2, 166, 242);
+.md-gradient-option {
+  background: linear-gradient(45deg, #f8c1df 0%, #f283bf 33%, #eb449e 66%, #e4067e 100%);
 }
 
-.md-typeset .base-info>.admonition-title,
-.md-typeset .base-info>summary {
-  background-color: rgba(36, 182, 250, 0.432);
+.md-reverse-gradient {
+  background: linear-gradient(45deg, #e4067e 0%, #e4067e 33%, #eb449e 66%, #f283bf 100%);
 }
 
-.md-typeset .base-info>.admonition-title::before,
-.md-typeset .base-info>summary::before {
-  background-color: rgb(255, 255, 255);
-  -webkit-mask-image: var(--md-admonition-icon--base-info);
-  mask-image: var(--md-admonition-icon--base-info);
+.md-new-gradient {
+  background: linear-gradient(45deg, #9a95b0 0%, #676088 50%, #342b60 100%);
+}
+
+.md-custom-gradient {
+  background: linear-gradient(45deg, #4dbed2 0%, #342b60 100%);
 }
