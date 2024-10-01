@@ -2,19 +2,19 @@
 nav:
   - Home: index.md
   - Access & Usage: 
-      - Cloud Access (Virtual Machines):
-          - TalTech OpenStack Cloud: access/cloud.md
-      - TalTech Cluster (Compute Resources): 
+      - TalTech Cluster: 
           - Cluster usage: access/cluster.md
           - MPI: access/mpi.md
           - SAMBA Network Drive: access/samba.md
           - Cluster GPU usage: access/cluster-gpu.md
           - Cluster Hardware: access/hardware.md
-      - LUMI (Compute Resources): 
+      - LUMI Supercomputer: 
           - What is and why to use LUMI?: access/lumi.md
           - Quick Start: access/lumi-start.md
           - Software: access/lumi-software.md
           - Slurm Usage Examples: access/lumi-examples.md
+      - TalTech HPC Cloud:
+          - TalTech OpenStack Cloud: access/cloud.md
       - Access:
         - Putty: access/putty.md
         - SSH Key Generation: access/ssh.md
