@@ -11,6 +11,12 @@ The menu only contains a couple of programs from the operating system.
 
 To start software, open an XTerminal and use the module system as you would from the command line and start the program from there.
 
+NB: Do not use quality settings "Compression 0" and/or "Image Quality 9", this will cause a zlib error message. The message box can be removed by reloading the browser tab:
+
+![bestsettings](/visualization/attachments/ondemand-best-quality-settings.png)
+
+![error](/visualization/attachments/ondemand-zlib-error.png)
+
 ---
 
 ## Accessing the visualization system

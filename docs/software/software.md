@@ -263,7 +263,7 @@ The option `--user` will install the package into the user's $HOME directory (in
 - [VisIt](https://visit-dav.github.io/visit-website/) (**all nodes** spack module visit)
 - [COVISE](https://www.hlrs.de/solutions/types-of-computing/visualization/covise) (**viz**: run `/usr/local/covise/bin/covise`)
 - [MayaVi](http://mayavi.sourceforge.net/) (**all nodes:** spack module py-mayavi)
-- GNUplot  (**all nodes** )
+- GNUplot  (**all nodes** spack module gnuplot)
 - OpenDX (**currently not available** will come soon)
 - Software for computational chemistry:
   - [Molden](https://www.theochem.ru.nl/molden/)
@@ -272,6 +272,6 @@ The option `--user` will install the package into the user's $HOME directory (in
   - [VMD](http://www.ks.uiuc.edu/Research/vmd/) (**all nodes:** spack module vmd)
   - [RasMol](http://www.openrasmol.org/)
 - Software for movie animation
-  - Blender
+  - Blender (**all nodes** module blender)
 
 The recommended way now is to use a desktop session in OnDemand, see also the [visualization](/visualization/visualization) page on how to start these and on GPU acceleration.
