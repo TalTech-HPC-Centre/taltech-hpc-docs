@@ -99,7 +99,7 @@ In addition to the coordinate file, TURBOMOLE uses a special interactive program
 define
 ```
 
-The answers to `define`'s questions can be presented as a separate file. More about `define` can be read in [‘Quick and Dirty’ Tutorial](http://www.cosmologic-services.de/downloads/TM72-documentation/DOKse8.html) and [TURBOMOLE tutorial](/software/attachments/Turbomole_Tutorial_7-0.pdf). Some examples of define files can be found [here](/software/define).
+The answers to `define`'s questions can be presented as a separate file. More about `define` can be read from the [TURBOMOLE tutorial](/software/attachments/Turbomole_Tutorial_7-0.pdf). Some examples of define files can be found [here](/software/define).
 
 To include solvent effects into calculations, the interactive program `cosmoprep` should be run after `define`.
 
