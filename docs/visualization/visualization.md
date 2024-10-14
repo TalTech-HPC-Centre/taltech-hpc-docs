@@ -92,6 +92,30 @@ Otherwise, the Desktop works as the regular (software rendering) one, see above.
 
 Please note that for most applications, software rendering is fast enough. Only heavy visualization, like volume visualization in ParaView, COVISE, VisIt, VMD, Star-CCM+, and Ansys, may require GPU rendering.
 
+**Check using `nvtop` that your application actually uses the GPU!!!**
+
+### ParaView with EGL acceleration
+
+It is not possible to have EGL rendering and the OpenGL GUI compiled together, therefore the EGL accelerated `pvserver` and the OpenGL GUI come from different modules and can run on different compute nodes.
+
+The start-up procedure for EGL accelerated rendering is the same as for use of ParaView in distributed mode.
+
+1. Start an OnDemand desktop on a GPU node and request a GPU
+2. Open 2 XTerms
+3. in Xterm 1: `module load rocky8-spack paraview/5.12.1-gcc-10.3.0-dotq` and start the ParaView GUI `paraview`
+4. in Xterm 2: `module load rocky8 paraview/5.12.1-egl` and start the ParaView server `pvserver` (alternatively, you could ssh into base and start a separate job on a gpu node with srun or sbatch)
+5. in GUI select "Connect" and connect to either localhost:11111 or the gpu node the pvserver runs on, use "manual" connect, then choose "connect".
+
+A similar procedure can also be used to connect a client running on your desktop computer to the pvserver on the compute node.
+
+For more explanations, see [ParaView WIKI](https://www.paraview.org/Wiki/Reverse_connection_and_port_forwarding).
+
+### StarCCM+ with hardware rendering
+
+```bash
+vglrun starccm+ -clientldpreload /usr/lib64/libvglfaker.so -graphics native -rgpu auto  -power -fabric TCP -podkey $YOURPODKEY ...
+```
+
 ## In-situ visualization (in preparation)
 
 In-situ visualization creates the visualization during the simulation instead of during the post-processing phase. The simulation code needs to be connected to in-situ visualization libraries, e.g., Catalyst (ParaView), LibSim (VisIt), and Ascent.

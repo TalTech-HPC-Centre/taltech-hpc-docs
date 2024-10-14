@@ -32,6 +32,18 @@ TalTech courses:
 
 TalTech courses:
 
-- YFX1510 Scientific Computing (requires knowledge of C programming and Linux)
-- YFX0500 Introduction to Programming in Python
+- YFX1510 Scientific Computing (requires knowledge of Linux)
 - YMX0110 Numerical Methods and Packages of Mathematics
+- ECK0400 Computational Marine Hydrodynamics
+- YFX9570 Computational Fluid Dynamics
+
+---
+
+## Resources for learning data analysis
+
+TalTech courses:
+
+- YFX0500 Introduction to Programming in Python
+- YMX8170 Deep Learning for Science
+- YFX1550 Scientific Python: Computing and Data Analysis
+- NSO8062 Geophysical data analysis
