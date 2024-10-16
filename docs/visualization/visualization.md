@@ -75,6 +75,17 @@ vglrun starccm+ -clientldpreload /usr/lib64/libvglfaker.so -graphics native -rgp
 
 ## _Available Visualization software on compute nodes_
 
+Program from a list below and its environment can be loaded by:
+
+```bash
+module load rocky8-spack
+module load <program name>
+```
+
+_where the **program name is in lowercase letters**_
+
+Some available software:
+
 - ParaView
 - VisIt
 <!-- -   COVISE -->
@@ -87,6 +98,8 @@ vglrun starccm+ -clientldpreload /usr/lib64/libvglfaker.so -graphics native -rgp
 - Ovito
 - Ospray (raytracer)
 - PoVray (raytracer)
+
+Programs are run by corresponding names in lowercase letters: **paraview** / **visit** / **vmd**.
 
 ## In-situ visualization (in preparation)
 
