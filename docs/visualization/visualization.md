@@ -3,19 +3,19 @@
 !!! tip
     The recommended way of doing visualizations is now using the **desktop session** on [ondemand.hpc.taltech.ee](https://ondemand.hpc.taltech.ee).
 
-## OnDemand Desktop on any node (software rendering)
+## OnDemand Desktop on any node and CPU
 
 OnDemand is a graphical user interface that allows access to HPC via a web browser. Within the OnDemand environment users can access to a HPC files, submit jobs to a cluster, monitor jobs and HPC resources, run interactive applications like Jupyter.
 
 The default desktop environment is XFCE, which is configurable, lightweight, and fast.
-
-![ondemand-1](/visualization/attachments/ondemand-1.png)
 
 ### Running jobs on OnDemand
 
 The menu only contains a couple of programs from the operating system. However, **all installed software can be open an XTerminal** using the module system as you would from the command-line. To do that:
 
 1. Choose **TalTech HPC Desktop**.
+
+    ![ondemand-1](/visualization/attachments/ondemand-1.png)
 
 2. Set up and launch an interactive desktop (1 core and 1 GB of memory is usually enough if no calculations are planned).
 
@@ -38,6 +38,14 @@ The menu only contains a couple of programs from the operating system. However, 
     ![error](/visualization/attachments/ondemand-zlib-error.png)
 
 5. To start interactive desktop press "Launch TalTech HPC Desktop"
+
+    The HPC Desktop will appear, where XTerminal can be opened.
+
+    ![ondemand-5](visualization/ondemand-5.png)
+
+    Load environment and program needed and start vizualization. More detailed instructions on environment and program loading are given below.
+
+    ![ondemand-6](visualization/ondemand-6.png)
 
 ---
 
@@ -91,8 +99,7 @@ Some available software:
 <!-- -   COVISE -->
 - Py-MayaVi
 <!-- -   OpenDX -->
-- RasMol
-- VESTA
+- Molden
 <!-- -   VAPOR -->
 - VMD
 - Ovito
@@ -100,6 +107,24 @@ Some available software:
 - PoVray (raytracer)
 
 Programs are run by corresponding names in lowercase letters: **paraview** / **visit** / **vmd**.
+
+### GaussView & Avogadro
+
+GaussView can be started by commands:
+
+```bash
+module load rocky8/all
+module load gaussview
+gview.sh <job name>
+```
+
+To run Avogadro:
+
+```bash
+module load rocky8/all
+module load avogadro
+avogadro <job name>
+```
 
 ## In-situ visualization (in preparation)
 
