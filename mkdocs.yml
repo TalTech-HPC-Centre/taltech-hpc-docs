@@ -67,14 +67,11 @@ nav:
 
 site_name: TalTech HPC User Guides
 site_author: TalTech HPC Centre
-site_url: https://taltech-hpc-centre.github.io/taltech-hpc-docs/
+site_url: https://docs-dev.taltech.jamfox.dev/
 edit_uri: edit/main/docs/
 docs_dir: docs
 repo_name: github.com/TalTech-HPC-Centre
 repo_url: https://github.com/TalTech-HPC-Centre/taltech-hpc-docs
-validation:
-  links:
-    absolute_links: relative_to_docs
 
 theme:
   name: material
@@ -122,7 +119,7 @@ theme:
 plugins:
   - search
   - glightbox
-  - abs-to-rel
+#  - abs-to-rel
 #  - exporter
 #  - exporter-pdf
 #  - exporter-extras:
