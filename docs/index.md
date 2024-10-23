@@ -1,13 +1,13 @@
 ---
 hide:
-  - navigation
+  #- navigation
   - toc
 title: Welcome to TalTech HPC User Guides!
 ---
 
 # Welcome to TalTech HPC User Guides!
 
-![HPC](assets/HPC.jpg)
+![HPC](/assets/HPC.jpg)
 
 ---
 

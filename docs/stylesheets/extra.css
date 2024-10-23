@@ -1,32 +1,43 @@
+/* TalTech storybook used as reference: https://storybook.taltech.ee/ */
+
 :root {
-  --md-primary-fg-color:        #4dbed2;
-  --md-primary-fg-color--light: #4dbed2;
-  --md-primary-fg-color--dark:  #4dbed2;
-  --idk0: #584b98;
-  --idk: #394878;
-  --idk2: #505ca1;
-  --idk3: #656cc8;
+  /* Primary foreground color */
+  --md-primary-fg-color:        #e4067e;
+  --md-primary-fg-color--light: #e4067e;
+  --md-primary-fg-color--dark:  #e4067e;
+  
+  /* Accent foreground color */
+  --md-accent-fg-color:         #ab055f;
 }
+
 .md-header {
-  background: linear-gradient(90deg, #4dbed2 0%, #342b60 100%);
+  /* Background color for header */
+  background: #e4067e;
 }
 
 .md-tabs {
+  /* Background color for top navbar */
+  background: #e4067e;
+}
+
+.md-pink-gradient {
+  /* Pink gradient background, not used anywhere, here for reference */
+  background: linear-gradient(90deg, #e4067e 0%, #e4067e 33%, #eb449e 66%, #f283bf 100%);
+}
+
+/* Dark blue gradient background, not used anywhere, here for reference */
+.md-darkblue-gradient {
+  background: linear-gradient(90deg, #9a95b0 0%, #676088 50%, #342b60 100%);
+}
+
+/* Light to dark blue gradient background, not used anywhere, here for reference */
+.md-light-to-darkblue-gradient {
   background: linear-gradient(90deg, #4dbed2 0%, #342b60 100%);
 }
 
-.md-gradient-option {
-  background: linear-gradient(45deg, #f8c1df 0%, #f283bf 33%, #eb449e 66%, #e4067e 100%);
-}
-
-.md-reverse-gradient {
-  background: linear-gradient(45deg, #e4067e 0%, #e4067e 33%, #eb449e 66%, #f283bf 100%);
-}
-
-.md-new-gradient {
-  background: linear-gradient(45deg, #9a95b0 0%, #676088 50%, #342b60 100%);
-}
-
-.md-custom-gradient {
-  background: linear-gradient(45deg, #4dbed2 0%, #342b60 100%);
+@media (min-width: 1200px) {
+  .md-content__inner img { 
+    /* Max width for images inside content on large screens */
+    max-width: 80%;
+  }
 }

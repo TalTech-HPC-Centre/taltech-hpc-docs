@@ -1,0 +1,22 @@
+name: Deploy to production on manual trigger
+on:
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: git checkout gh-pages
+      #- run: sed -i 's/^site_url:.*/site_url: https:\/\/docs.hpc.taltech.ee/' mkdocs.yml
+      #- run: echo "docs.hpc.taltech.ee" > public/CNAME
+      - uses: cpina/github-action-push-to-another-repository@main
+        env:
+          SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
+        with:
+          source-directory: './'
+          destination-github-username: 'TalTech-HPC-Centre'
+          destination-repository-name: 'taltech-hpc-docs-prod'
+          user-email: hpc-actions@taltech.ee
+          target-branch: main
+          target-directory: public
