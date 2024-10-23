@@ -8,6 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: git checkout gh-pages
+      - run: sed -i 's/^site_url:.*/site_url: https:\/\/taltech-hpc-centre.github.io/taltech-hpc-docs-prod/' mkdocs.yml
       #- run: sed -i 's/^site_url:.*/site_url: https:\/\/docs.hpc.taltech.ee/' mkdocs.yml
       #- run: echo "docs.hpc.taltech.ee" > public/CNAME
       - uses: cpina/github-action-push-to-another-repository@main
