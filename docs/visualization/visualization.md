@@ -41,11 +41,11 @@ The menu only contains a couple of programs from the operating system. However, 
 
     The HPC Desktop will appear, where XTerminal can be opened.
 
-    ![ondemand-5](visualization/ondemand-5.png)
+    ![ondemand-5](/visualization/attachments/ondemand-5.png)
 
     Load environment and program needed and start vizualization. More detailed instructions on environment and program loading are given below.
 
-    ![ondemand-6](visualization/ondemand-6.png)
+    ![ondemand-6](/visualization/attachments/ondemand-6.png)
 
 ---
 
