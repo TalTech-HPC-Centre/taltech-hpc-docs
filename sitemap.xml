@@ -9,179 +9,183 @@
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/access/cloud/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/cfd/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/access/cluster-gpu/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/chapel/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/access/cluster/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/cloud/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/access/hardware/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/define/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/access/lumi-examples/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/easybuild/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/access/lumi-software/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/fea/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/access/lumi-start/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/gpu/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/access/lumi/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/hardware/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/access/mpi/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/learning/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/access/putty/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/lumi/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/access/samba/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/modules/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/access/ssh/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/mpi/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/jobs/singularity/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/performance/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/jobs/slurm-example/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/profiling/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/jobs/slurm-statistics/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/putty/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/learning/learning/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/quickstart/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/learning/performance/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/samba/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/learning/profiling/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/singularity/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/software/cad-mesh/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/slurm/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/software/cfd/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/slurm_example/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/software/chapel/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/slurm_statistics/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/software/cp2k/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/software/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/software/crest/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/spack/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/software/define/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/ssh/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/software/easybuild/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/visualization/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/software/elmerfem/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/chemistry/cp2k/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/software/fea/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/chemistry/crest/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/software/gaussian/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/chemistry/gaussian/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/software/jupyter/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/chemistry/multiwfn/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/software/modules/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/chemistry/nwchem/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/software/multiwfn/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/chemistry/orca/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/software/nwchem/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/chemistry/turbomole/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/software/octave/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/chemistry/visualization/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/software/openfoam/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/chemistry/xtb/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/software/orca/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/data-analysis/jupyter/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/software/software/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/data-analysis/octave/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/software/spack/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/engineering/cad-mesh/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/software/swan/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/engineering/elmerfem/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/software/turbomole/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/engineering/openfoam/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/software/wam/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/engineering/swan/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/software/xtb/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/engineering/wam/</loc>
+         <lastmod>2024-10-23</lastmod>
+    </url>
+    <url>
+         <loc>https://docs-dev.taltech.jamfox.dev/lumi/examples/</loc>
+         <lastmod>2024-10-23</lastmod>
+    </url>
+    <url>
+         <loc>https://docs-dev.taltech.jamfox.dev/lumi/software/</loc>
+         <lastmod>2024-10-23</lastmod>
+    </url>
+    <url>
+         <loc>https://docs-dev.taltech.jamfox.dev/lumi/start/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
          <loc>https://docs-dev.taltech.jamfox.dev/visualization/VirtualGL/</loc>
-         <lastmod>2024-10-23</lastmod>
-    </url>
-    <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/visualization/visualization-chemistry/</loc>
-         <lastmod>2024-10-23</lastmod>
-    </url>
-    <url>
-         <loc>https://docs-dev.taltech.jamfox.dev/visualization/visualization/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
