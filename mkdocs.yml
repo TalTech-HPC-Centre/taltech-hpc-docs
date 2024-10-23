@@ -40,7 +40,7 @@ nav:
       - Slurm Usage Examples: lumi-examples.md
   - TalTech OpenStack Cloud:
       - TalTech OpenStack Cloud: cloud.md
-  - Billing: index.md#billing
+  - Billing: billing.md
   - Acknowledgement: acknowledgement.md
 
 
