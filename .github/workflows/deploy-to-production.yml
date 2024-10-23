@@ -11,6 +11,8 @@ jobs:
         run: git clone --branch gh-pages --depth 1 https://github.com/TalTech-HPC-Centre/taltech-hpc-docs.git public/ && rm -rf public/.git
       - name: Change CNAME to match production URL
         run: "echo 'docs.taltech.jamfox.dev' > public/CNAME"
+      - name: Replace URL in all public/ files
+        run: "find public/ -type f -exec sed -i 's/docs-dev.taltech.jamfox.dev/docs.taltech.jamfox.dev/g' {} +"
       - uses: cpina/github-action-push-to-another-repository@main
         env:
           SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
