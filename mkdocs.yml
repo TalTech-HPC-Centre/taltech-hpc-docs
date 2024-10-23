@@ -2,66 +2,44 @@
 nav:
   - Home: index.md
   - TalTech Cluster: 
-      - Cluster usage: access/cluster.md
-      - MPI: access/mpi.md
-      - SAMBA Network Drive: access/samba.md
-      - Cluster GPU usage: access/cluster-gpu.md
-      - Cluster Hardware: access/hardware.md
-      - Access:
-        - Putty: access/putty.md
-        - SSH Key Generation: access/ssh.md
-      - Learning:
-          - learning/learning.md
-          - Performance: learning/performance.md
-          - Profiling: learning/profiling.md
-      - Job Submission:
-          - Slurm Examples: jobs/slurm-example.md
-          - Slurm Statistics: jobs/slurm-statistics.md
-          - Singularity Containers: jobs/singularity.md
-      - Software:
-          - software/software.md
-          - Modules and Package Managers:
-              - Modules: software/modules.md
-              - EasyBuild: software/easybuild.md
-              - SPACK: software/spack.md
+      - Quickstart: quickstart.md
+      - MPI: mpi.md
+      - SAMBA Network Drive: samba.md
+      - Cluster GPU usage: gpu.md
+      - Performance: performance.md
+      - Profiling: profiling.md
+      - Modules and Package Managers:
+          - Modules: modules.md
+          - SPACK: spack.md
+      - Software packages:
+          - software.md
           - Engineering Software:
-              - CAD-Mesh: software/cad-mesh.md
-              - ElmerFEM: software/elmerfem.md
-              - OpenFOAM: software/openfoam.md
-              - SWAN: software/swan.md
-              - WAM: software/wam.md
+              - CAD-Mesh: cad-mesh.md
+              - ElmerFEM: elmerfem.md
+              - OpenFOAM: openfoam.md
+              - SWAN: swan.md
+              - WAM: wam.md
           - Chemistry Software:
-              - xtb-CREST: software/crest.md
-              - Gaussian: software/gaussian.md
-              - ORCA: software/orca.md
-              - NWChem: software/nwchem.md
-              - Multiwfn: software/multiwfn.md
-              - XTB: software/xtb.md
-              - TURBOMOLE: software/turbomole.md
+              - xtb-CREST: crest.md
+              - Gaussian: gaussian.md
+              - ORCA: orca.md
+              - NWChem: nwchem.md
+              - Multiwfn: multiwfn.md
+              - XTB: xtb.md
+              - TURBOMOLE: turbomole.md
               - Chemistry Visualization: visualization/visualization-chemistry.md
           - Data Analysis Software:
-              - Jupyter: software/jupyter.md
-              - Octave: software/octave.md
-          - Other:
-              - Computational Fluid Dynamics: software/cfd.md
-              - Finite Element Analysis: software/fea.md
-              - Chapel: software/chapel.md
-              - Define: software/define.md
-              - cp2k: software/cp2k.md
+              - Jupyter: jupyter.md
+              - Octave: octave.md
       - Visualization:
-          - visualization/visualization.md
-          - VNC: visualization/vnc.md
-          - X2Go: visualization/x2go.md
-          - Xpra: visualization/xpra.md
-          - VirtualGL: visualization/VirtualGL.md
-          - Chemistry Visualization: visualization/visualization-chemistry.md
+          - visualization.md
   - LUMI Supercomputer: 
-      - What is and why to use LUMI?: access/lumi.md
-      - Quick Start: access/lumi-start.md
-      - Software: access/lumi-software.md
-      - Slurm Usage Examples: access/lumi-examples.md
-  - TalTech HPC Cloud:
-      - TalTech OpenStack Cloud: access/cloud.md
+      - What is and why to use LUMI?: lumi.md
+      - Quick Start: lumi-start.md
+      - Software: lumi-software.md
+      - Slurm Usage Examples: lumi-examples.md
+  - TalTech OpenStack Cloud:
+      - TalTech OpenStack Cloud: cloud.md
   - Acknowledgement: acknowledgement.md
 
 
