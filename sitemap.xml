@@ -1,199 +1,199 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/acknowledgement/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/acknowledgement/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/access/cloud/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/access/cloud/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/access/cluster-gpu/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/access/cluster-gpu/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/access/cluster/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/access/cluster/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/access/hardware/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/access/hardware/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/access/lumi-examples/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/access/lumi-examples/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/access/lumi-software/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/access/lumi-software/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/access/lumi-start/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/access/lumi-start/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/access/lumi/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/access/lumi/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/access/mpi/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/access/mpi/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/access/putty/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/access/putty/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/access/samba/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/access/samba/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/access/ssh/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/access/ssh/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/jobs/singularity/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/jobs/singularity/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/jobs/slurm-example/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/jobs/slurm-example/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/jobs/slurm-statistics/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/jobs/slurm-statistics/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/learning/learning/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/learning/learning/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/learning/performance/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/learning/performance/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/learning/profiling/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/learning/profiling/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/software/cad-mesh/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/software/cad-mesh/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/software/cfd/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/software/cfd/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/software/chapel/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/software/chapel/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/software/cp2k/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/software/cp2k/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/software/crest/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/software/crest/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/software/define/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/software/define/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/software/easybuild/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/software/easybuild/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/software/elmerfem/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/software/elmerfem/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/software/fea/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/software/fea/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/software/gaussian/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/software/gaussian/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/software/jupyter/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/software/jupyter/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/software/modules/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/software/modules/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/software/multiwfn/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/software/multiwfn/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/software/nwchem/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/software/nwchem/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/software/octave/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/software/octave/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/software/openfoam/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/software/openfoam/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/software/orca/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/software/orca/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/software/software/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/software/software/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/software/spack/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/software/spack/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/software/swan/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/software/swan/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/software/turbomole/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/software/turbomole/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/software/wam/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/software/wam/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/software/xtb/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/software/xtb/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/visualization/VirtualGL/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/visualization/VirtualGL/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/visualization/visualization-chemistry/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/visualization/visualization-chemistry/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/visualization/visualization/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/visualization/visualization/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/visualization/vnc/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/visualization/vnc/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/visualization/x2go/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/visualization/x2go/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://taltech-hpc-centre.github.io/taltech-hpc-docs/visualization/xpra/</loc>
+         <loc>https://docs-dev.taltech.jamfox.dev/visualization/xpra/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
 </urlset>
