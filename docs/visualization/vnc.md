@@ -1,232 +1,246 @@
+<span style="color:red">not changed to rocky yet</span>
+
 # Remote visualization using VNC
 
-!!! warning
-    This page has not been completely updated for Rocky 8 yet!
-
----
+<br>
+<hr style="margin-right: 0px; margin-bottom: 4px; margin-left: 0px; margin-top: -24px; border:2px solid  #d9d9d9 "></hr>
+<hr style="margin: 4px 0px; border:1px solid  #d9d9d9 "></hr>
 
 ## Short guide
 
+---
+
 1. Connect to **viz**:
 
-    ```sh
-    ssh uni-ID@viz.hpc.taltech.ee
-    ```
+		ssh uni-ID@viz.hpc.taltech.ee
 
-2. Start VNC on **viz** with the command:
+2. Start VNC on **viz** by command:
 
-    ```sh
-    vncserver -geometry 1265x980
-    ```
+		vncserver -geometry 1265x980
 
 3. Open a second connection to **viz**:
 
-    ```sh
-    ssh -L 59XX:localhost:50XX uni-ID@viz.hpc.taltech.ee
-    ```
+		ssh -L 59XX:localhost:50XX uni-ID@viz.hpc.taltech.ee
 
-    where `XX` is the display number that appears after giving the `vncserver` command.
-    **NB!** _`XX` is always a two-digit number (e.g., `01` for `:1`)_
+	where `XX` is the display number that appear after giving `vncserver` command.   
+	***NB!*** _`XX` is always the number of two digits (e.g. `01` for `:1`)_
 
-4. On your desktop, start a vncviewer:
+4. On your desktop start a vncviewer
 
-    ```sh
-    vncviewer :XX
-    ```
+    	vncviewer :XX
 
-    where `XX` is the display number.
+	where `XX` is the display number
 
-5. **Stop the vncserver!!!** on **viz** with the command:
+5. **Stop the vncserver!!!** on **viz** by command:
 
-    ```sh
-    vncserver -kill :XX
-    ```
+    	vncserver -kill :XX
 
----
+<br>
+<br>
+<br>
+<hr style="margin-right: 0px; margin-bottom: 4px; margin-left: 0px; margin-top: -24px; border:2px solid  #d9d9d9 "></hr>
+<hr style="margin: 4px 0px; border:1px solid  #d9d9d9 "></hr>
 
 ## Get started
+
+---
 
 ### Software recommended to use
 
 Virtual Network Computing (VNC) is a graphical desktop-sharing system to remotely control another computer.
 
-The client (your desktop) computer needs a vncviewer:
+<div class="simple1">
+The client (your desktop) computer needs a vncviewer
 
-- **Linux:** [xtigervncviewer](https://command-not-found.com/xtigervncviewer)
-- **Windows:** TigerVNCviewer: [vncviewer64-1.12.0.exe](https://sourceforge.net/projects/tigervnc/files/stable/1.12.0/vncviewer64-1.12.0.exe/download)
-- **Mac:** [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/)
+-   **Linux:** [xtigervncviewer](https://command-not-found.com/xtigervncviewer)
+-   **Windows:** TigerVNCviewer: [vncviewer64-1.12.0.exe](https://sourceforge.net/projects/tigervnc/files/stable/1.12.0/vncviewer64-1.12.0.exe/download)
+-   **Mac:** [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/)
+</div>
+<br>
 
 ### First time use
 
-On the first start, VNC asks you to specify a password to connect to the server. Choose a secure one that does not match your HPC/UniID password because VNC connections are not encrypted!
+On the first start, VNC asks to specify a password to connect to the server, choose a secure one, which does not match your HPC/UniID password because VNC connections are not encrypted!
 
-![vnc-host-0](/visualization/attachments/vnc-host-0.png)
+
+<div style="width:95%; height:!95%; margin-left: auto; margin-right: auto;"> 
+
+![vnc-host-0](vnc-host-0.png)
+
+</div>
+
+
+<br>
+<br>
+<hr style="margin-right: 0px; margin-bottom: 4px; margin-left: 0px; margin-top: -24px; border:2px solid  #d9d9d9 "></hr>
+<hr style="margin: 4px 0px; border:1px solid  #d9d9d9 "></hr>
+
+## VNC Long version 
 
 ---
 
-## VNC Long version
+VNC should be run firstly at **viz** node of HPC and after at user's computer.
 
-VNC should be run first on the **viz** node of HPC and then on the user's computer.
 
-1. Connect to **viz** with the command:
+1. Connect to **viz** by command:
 
-    ```sh
-    ssh uni-ID@viz.hpc.taltech.ee
-    ```
+	   ssh uni-ID@viz.hpc.taltech.ee
 
-    If this command does not work, try to connect through the jump host:
+	if this command does not work try to connect through jump host:
 
-    ```sh
-    ssh -J uni-ID@base.hpc.taltech.ee uni-ID@viz 
-    ```
+		ssh -J uni-ID@base.hpc.taltech.ee uni-ID@viz 
 
-    **NB!** _Connection to **viz** can be done **only** with SSH keys. The SSH key generation guide is [here](/access/ssh)._
+	***NB!*** _Connection to **viz** can be done ***only*** with SSH keys. SSH key generation guide is [here](../ssh.md)._
 
-    **NB!** _To use **viz**, the SSH key must be added to the **base** node._
+	***NB!*** _To use **viz** the SSH key must be added to the **base** node._
 
-    On Mac and Linux, this can be done with the command:
+	On Mac and Linux this can be done by command:
 
-    ```sh
-    ssh-copy-id Uni-ID@base.hpc.taltech.ee
-    ```
+    	ssh-copy-id Uni-ID@base.hpc.taltech.ee
 
-    After about an hour, when the automatic script has synced the files, you can use **viz**.
+	After about an hour, when the automatic script has synced the files, and you can use **viz**.
 
-2. On **viz**, start the VNC server. Depending on which VNC client the user has, one of these commands should be given:
+2. On **viz** start the VNC server. Depending on which VNC client user has, one of those commands should be given:
 
-    ```sh
-    vncserver -geometry 1265x980
-    ```
+		vncserver -geometry 1265x980
 
-    and for Tiger VNC:
+	and for Tiger VNC:
 
-    ```sh
-    tigervncserver -geometry 1280x1024
-    ```
+    	tigervncserver -geometry 1280x1024
 
-    It is recommended to specify the window size as well with the `-geometry` flag, since changing the resolution of the remote desktop (= window size) at runtime can have undesired effects.
+	It is recommended to specify window size as well by `-geometry` flag, since changing the resolution of the remote desktop (= window size) at runtime can have undesired effects. 
 
 3. The output in the terminal will show on which display VNC is running.
 
-    ![vnc-host-1](/visualization/attachments/vnc-host-1.png)
+	 <div style="width:95%; height:!95%; margin-left: auto; margin-right: auto;"> 
 
-    See the second line `desktop at :8`, where `:8` is the display number -- further `XX`.
+	![vnc-host-1](vnc-host-1.png)
+	
+	</div>
 
-4. Open a second connection to **viz** (in a new terminal) and give the command:
+	see second line `desktop at :8`, where `:8` is the display number -- further `XX`.
 
-    ```sh
-    ssh -L 59XX:localhost:50XX uni-ID@viz.hpc.taltech.ee
-    ```
+4. Open a second connection to **viz** (in new terminal) and give the command:
 
-    where `XX` is the display number as two digits (e.g., `01` for `:1`).
+    	ssh -L 59XX:localhost:50XX uni-ID@viz.hpc.taltech.ee
 
-    **NB!** _If you were connected through the jump host, this command should be given:_
+	where `XX` is the display number as two digits (e.g. `01` for `:1`)
 
-    ```sh
-    ssh -J Uni-ID@base.hpc.taltech.ee -L 59XX:127.0.0.1:59XX Uni-ID@viz
-    ```
+	***NB!*** _If you were connected through jump host this command should be given:_
 
-5. On **your desktop**, start a VNC viewer. If you do it from the terminal, give one of these commands depending on which VNC viewer you have:
+		ssh -J Uni-ID@base.hpc.taltech.ee -L 59XX:127.0.0.1:59XX Uni-ID@viz
 
-    ```sh
-    vncviewer :XX
-    ```
+4. On **your desktop** start a VNC viewer. If you do it from terminal -- give one of these command depending on which VNC viewer you have:
 
-    or
+    	vncviewer :XX
 
-    ```sh
-    xtigervncviewer localhost:XX
-    ```
+	or
 
-    where `XX` is the number from above. On Windows (depending on the VNC client), the address to connect to could be `localhost::50XX` (again, the `XX` stands for the display/port as specified before).
+    	xtigervncviewer localhost:XX
 
-    If you use a graphical interface, specify localhost in the corresponding field (line at the top) and click the "Continue" button.
+	where `XX` is the number from above. On Windows (depending on the VNC-client) the address to connect to could be `localhost::50XX` (again, the `XX` stands for the display/port as specified before).
 
-    ![vnc-1](/visualization/attachments/vnc-1.png)
+If you use graphical interface - specify localhost - in the corresponding field (line in the top) and click bottom "Continue". 
 
-    Type the password.
+<div style="width:75%; height:!75%; margin-left: auto; margin-right: auto;"> 
 
-    ![vnc-2](/visualization/attachments/vnc-2.png)
+![vnc-1](vnc-1.png)
 
-    If you see a monochromatic field and cannot start a session, it means that you need to set up your VNC session: [Setting up VNC config](#setting-up-vnc-session).
+</div>
 
-    If you see a terminal, then everything is done correctly and you can start working. Within the session window, you can start any program from the terminal or using the menus of the window manager.
+Type password.
 
-    **Viz** has a module system. Most of the modules need to be loaded unless the manual says they are native.
+<div style="width:75%; height:!75%; margin-left: auto; margin-right: auto;"> 
 
-    Before loading modules, the source must be specified:
+![vnc-2](vnc-2.png)
 
-    ```sh
+</div>
+
+
+If you see monochromic field and can not start a session, it mean that you to set up your VNC session: [Setting up VNC config](https://docs.hpc.taltech.ee/visualization/vnc.html#setting-up-vnc-session).
+
+
+If you see terminal - then everything is done correctly and you can start working. Within the session window, you can start any program from the terminal or using the menus of the window manager.
+
+**Viz** has module system. Most of the modules are needed to be loaded unless the manual says they are native.
+
+Before loading modules, the source must be specified:
+
     source /usr/share/lmod/6.6/init/bash
     module use /gpfs/mariana/modules/system
-    ```
+         
+followed by two commands to load the modules. The first one loads ***viz-spack*** or ***viz module,*** depending on program installation type, and the second command loads the program itself.
+For example:
 
-    followed by two commands to load the modules. The first one loads **viz-spack** or **viz module**, depending on the program installation type, and the second command loads the program itself. For example:
+     module load viz-spack
+     module load jmol
+     
+<div style="width:75%; height:!75%; margin-left: auto; margin-right: auto;"> 
 
-    ```sh
-    module load viz-spack
-    module load jmol
-    ```
+![vnc-3](vnc-3.png)
 
-    ![vnc-3](/visualization/attachments/vnc-3.png)
+</div>
 
-    In the case of a native program, only the command that calls this program is needed.
+In case of native program only the command that calls this program is needed.
 
-    ```sh
     rasmol
-    ```
+    
+or 
 
-    or
-
-    ```sh
     paraview
-    ```
 
----
+<br>
+<br>
+<br>
+<hr style="margin-right: 0px; margin-bottom: 4px; margin-left: 0px; margin-top: -24px; border:2px solid  #d9d9d9 "></hr>
+<hr style="margin: 4px 0px; border:1px solid  #d9d9d9 "></hr>
 
 ## Correct termination
 
-It is very important to finish the session correctly! If you do not do it, the session continues to run even if you close the session on your computer.
+---
 
-To stop the VNC session, give on **viz** one of these commands:
+In is very important to finish session correctly! Since if you do not do it - session continue to run even if you close session on your computer. 
 
-```sh
-vncserver -kill :XX
-```
+To stop VNC session give on **viz** one of these commands:
+
+    vncserver -kill :XX
 
 or
 
-```sh
-tigervncserver -kill :XX
-```
+    tigervncserver -kill :XX
 
 where `XX` is the display number.
 
-Running sessions can be checked with the command:
+Running sessions can be checked by command:
 
-```sh
-vncserver -list
-```
+	vncserver -list
 
-![vnc-4](/visualization/attachments/vnc-4.png)
+
+<div style="width:85%; height:!85%; margin-left: auto; margin-right: auto;"> 
+
+![vnc-4](vnc-4.png)
+
+</div>
+
+
+<br>
+<br>
+<hr style="margin-right: 0px; margin-bottom: 4px; margin-left: 0px; margin-top: -24px; border:2px solid  #d9d9d9 "></hr>
+<hr style="margin: 4px 0px; border:1px solid  #d9d9d9 "></hr>
+
+## Setting up VNC session 
 
 ---
 
-## Setting up VNC session
+It is impossible to work with VNC without setting it. To do this give the following commands from home catalogue on **base** or **viz**:
 
-It is impossible to work with VNC without setting it up. To do this, give the following commands from the home directory on **base** or **viz**:
+	cat  <<EOT > .xsession
+	xterm &
+	fvwm2
+	EOT
 
-```sh
-cat <<EOT > .xsession
-xterm &
-fvwm2
-EOT
-```
+This will configure automatic startup of  `xterm` and  `fvwm2` window manager. Alternatively, user can use other window managers: more desktop-like -- `fluxbox`, `awesome` or `jwm` or tiling -- `i3`, `xmonad` or `tritium`. To do this, the corresponding line must be added to `.xsession` file by command:
 
-This will configure the automatic startup of `xterm` and the `fvwm2` window manager. Alternatively, the user can use other window managers: more desktop-like -- `fluxbox`, `awesome`, or `jwm` or tiling -- `i3`, `xmonad`, or `tritium`. To do this, the corresponding line must be added to the `.xsession` file with the command:
+	echo  "fluxbox" >> .xsession
 
-```sh
-echo "fluxbox" >> .xsession
-```
-
-The same way `.vnc/xstartup` can be configured in case the user wants to apply special settings exactly to VNC visualization.
+The same way `.vnc/xstartup` can be configured in case user wants to apply special settings exactly to VNC visualisation.
