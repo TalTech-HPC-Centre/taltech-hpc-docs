@@ -7,14 +7,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: git checkout gh-pages
-      - run: "sed -i 's/^site_url:.*/site_url: https://docs.taltech.jamfox.dev/' mkdocs.yml"
-      - run: "echo 'https://docs.taltech.jamfox.dev' > CNAME"
+      - name: Clone latest gh-pages deployment
+        run: git clone --branch gh-pages --depth 1 https://github.com/TalTech-HPC-Centre/taltech-hpc-docs.git public/
+      - name: Change CNAME to match production URL
+        run: "echo 'https://docs.taltech.jamfox.dev' > public/CNAME"
       - uses: cpina/github-action-push-to-another-repository@main
         env:
           SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
         with:
-          source-directory: './'
+          source-directory: 'public/'
           destination-github-username: 'TalTech-HPC-Centre'
           destination-repository-name: 'taltech-hpc-docs-prod'
           user-email: hpc-actions@taltech.ee
